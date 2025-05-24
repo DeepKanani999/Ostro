@@ -144,7 +144,7 @@ const faqs = [
   {
     question: "Where can I buy Somixa products?",
     answer:
-      "Somixa Masala is available online and in select retail stores. You can also order directly through our website or partner marketplaces for home delivery.",
+      "Somixa Masala is available online and in select retail stores. You can also order directly through our website or partner marketplaces for COD.",
   },
 ];
 
