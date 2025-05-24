@@ -1,0 +1,24 @@
+/* styles/styles.css */
+.hero-banner-carousel {
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero-slide {
+    width: 100%;
+  }
+  
+  .hero-banner-img {
+    width: 100%;
+    height: 82vh;
+    object-fit: cover;
+    /* padding: 0 10px; */
+  }
+  
+  @media (max-width: 768px) {
+    .hero-banner-img {
+      height: auto;
+      max-height: 60vh;
+      object-fit: contain;
+    }
+  }
