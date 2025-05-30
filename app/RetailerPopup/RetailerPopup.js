@@ -39,7 +39,7 @@ Village: ${form.village}
 Taluka: ${form.taluka}
 Pincode: ${form.pincode}`;
 
-    const whatsappNumber = "919726594265";
+    const whatsappNumber = "919942500600";
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       message
     )}`;
@@ -140,7 +140,7 @@ Pincode: ${form.pincode}`;
           </button>
           <button
             onClick={handleSubmit}
-            style={{ backgroundColor: "#39B54A", width: "50%" }}
+            style={{ backgroundColor: "#B62025", width: "50%" }}
             className="w-full bg-black text-white px-4 py-2 mt-6 rounded hover:bg-gray-800"
           >
             Submit

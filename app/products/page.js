@@ -4,9 +4,11 @@ import Layout from "@/layouts/Layout";
 import Link from "next/link";
 import { products } from "../products";
 import { useEffect, useState } from "react";
+import UserInfoPopup from "@/components/userDetailPopup";
 
 const Products = () => {
   const [showBar, setShowBar] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     let lastScrollTop = 0;
@@ -28,19 +30,19 @@ const Products = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919726594265"; // Replace with your number
+    window.location.href = "tel:+919942500600"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/K2WbFgvgbXR13jTj7", "_blank");
+    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/919726594265", "_blank"); // Replace with your number
+    window.open("https://wa.me/919942500600", "_blank"); // Replace with your number
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:somixafoodsllp@gmail.com"; // Replace with your email
+    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
@@ -71,8 +73,94 @@ const Products = () => {
     }
   };
 
+  const isMobileDevice = () => {
+    // Check user agent
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const isMobileUserAgent =
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        userAgent
+      );
+
+    // Check screen width
+    const isMobileScreen = window.innerWidth <= 768;
+
+    // Check if device has touch capability
+    const hasTouchScreen =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    return isMobileUserAgent || (isMobileScreen && hasTouchScreen);
+  };
+
+  useEffect(() => {
+    // Initial check
+    setIsMobile(isMobileDevice());
+
+    // Add resize listener
+    const handleResize = () => {
+      setIsMobile(isMobileDevice());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+
+    let lastScrollTop = 0;
+    const handleScroll = () => {
+      const st = window.scrollY || document.documentElement.scrollTop;
+      const isScrollingDown = st > lastScrollTop;
+      lastScrollTop = st <= 0 ? 0 : st;
+
+      if (isScrollingDown && window.innerWidth >= 768) {
+        setShowBar(true);
+      } else {
+        setShowBar(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false); // Close the popup
+  };
+
   return (
     <Layout>
+      {mounted && isPopupOpen && !sessionStorage.getItem("userInfo") && (
+        <div
+          style={{
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: 9999,
+            background: "rgba(255, 255, 255, 0.8)",
+            backdropFilter: "blur(10px)",
+            boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            padding: "20px",
+            width: "90%",
+            maxWidth: "400px",
+            textAlign: "center",
+          }}
+        >
+          <UserInfoPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
+        </div>
+      )}
       <PageBanner title={"Products"} />
       <section className="products-area pt-120 pb-120">
         <div
@@ -136,7 +224,7 @@ const Products = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/phone_black.png"
+                      src="/assets/images/black-icons/Call Us.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -166,7 +254,7 @@ const Products = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/location_black.png"
+                      src="/assets/images/black-icons/Location.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -207,7 +295,7 @@ const Products = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/whatsapp_black.png"
+                      src="/assets/images/black-icons/whatsapp.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -237,7 +325,7 @@ const Products = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/gmail_black.png"
+                      src="/assets/images/black-icons/email.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -247,39 +335,43 @@ const Products = () => {
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
-              <div style={{ display: "flex", gap: "10px" }}>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleFacebook}
-                  style={{ padding: "8px", backgroundColor: "#3A559F" }}
+              <div
+                  style={{ display: "flex", gap: "10px", marginLeft: "20px" }}
                 >
-                  <img src="/assets/images/icons/facebook.png" alt="Facebook" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleInstagram}
-                  style={{ padding: "8px", backgroundColor: "#D03B98" }}
-                >
-                  <img
-                    src="/assets/images/icons/instagram.png"
-                    alt="Instagram"
-                  />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleLinkedIn}
-                  style={{ padding: "8px", backgroundColor: "#0B63BD" }}
-                >
-                  <img src="/assets/images/icons/linkedin.png" alt="LinkedIn" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleShare}
-                  style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                >
-                  <img src="/assets/images/icons/share.png" alt="Share" />
-                </button>
-              </div>
+                  <button
+                    className="social-rounded-btn"
+                    onClick={handleFacebook}
+                  >
+                    <img
+                      src="/assets/images/social-media-icons/Facebook.svg"
+                      alt="Facebook"
+                    />
+                  </button>
+                  <button
+                    className="social-rounded-btn"
+                    onClick={handleInstagram}
+                  >
+                    <img
+                      src="/assets/images/social-media-icons/Instagram.svg"
+                      alt="Instagram"
+                    />
+                  </button>
+                  <button
+                    className="social-rounded-btn"
+                    onClick={handleLinkedIn}
+                  >
+                    <img
+                      src="/assets/images/social-media-icons/Linkedin.svg"
+                      alt="LinkedIn"
+                    />
+                  </button>
+                  <button className="social-rounded-btn" onClick={handleShare}>
+                    <img
+                      src="/assets/images/social-media-icons/Share.svg"
+                      alt="Share"
+                    />
+                  </button>
+                </div>
             </div>
           </div>
         </div>
@@ -555,9 +647,13 @@ const Products = () => {
                       <div
                         className="listing-thumbnail"
                         style={{
-                          backgroundColor: val.backgroundColor,
+                          backgroundColor: `${val.backgroundColor}`,
                           borderTopLeftRadius: "10px",
                           borderTopRightRadius: "10px",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "flex",
+                          height: "400px",
                         }}
                       >
                         <Link href={`/product-details/${val.slug}`}>
@@ -568,7 +664,7 @@ const Products = () => {
                         </Link>
                         <span
                           className="featured-btn"
-                          style={{ borderRadius: "5px" }}
+                          style={{ borderRadius: "5px", fontSize:"10px", padding:"3px 10px" }}
                         >
                           Featured
                         </span>
@@ -627,20 +723,21 @@ const Products = () => {
                                 }}
                               >
                                 <div
-                                  className="flex items-center gap-2 px-3 py-1 mt-1 mb-4 border border-gray-300 rounded-lg transition"
+                                  className="flex items-center gap-2 px-3 py-1 mt-1 mb-3 rounded-lg transition"
                                   style={{
-                                    backgroundColor: "#39B54A",
+                                    backgroundColor: "#FFF",
+                                    border: "1px solid #B62025",
+                                    borderColor: "#B62025",
                                     display: "flex",
                                     flexDirection: "row",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    marginBottom: "30px",
-                                    width: "100%", // Makes the button take full width
+                                    width: "100%",
                                   }}
                                 >
                                   <span
-                                    className="underline text-white"
-                                    style={{ fontSize: "20px" }}
+                                    className="underline"
+                                    style={{ fontSize: "18px", color:"#B62025" }}
                                   >
                                     View Details
                                   </span>
@@ -651,35 +748,6 @@ const Products = () => {
                         </div>
                       </div>
                     </div>
-                    {/* <div className="products-item products-item-one mb-25 wow fadeInUp">
-                      <div className="product-img">
-                        <Link href={`/product-details/${val.slug}`}>
-                          <img
-                            src={val?.image}
-                            alt="products Image"
-                            className="w-full h-auto object-cover rounded-lg"
-                          />
-                        </Link>
-                        <div className="product-overlay d-flex align-items-end justify-content-center">
-                          <div className="product-meta">
-                            <a href={val?.image} className="icon img-popup">
-                              <i className="ti-zoom-in" />
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="product-info text-center">
-                        <h3 className="title">
-                          <Link href={`/product-details/${val.slug}`}>
-                            {val.name}
-                          </Link>
-                        </h3>
-                        <p>
-                          {val.detail}
-                        </p>
-                      </div>
-
-                    </div> */}
                   </div>
                 );
               })}
