@@ -109,8 +109,8 @@ const Footer = () => {
           <UserInfoPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
         </div>
       )}
-      <div className="footer-wrapper-one dark-black pt-90">
-        <div className="footer-widget pb-60">
+      <div className="footer-wrapper-one dark-black pt-40 pb-80">
+        <div className="footer-widget">
           <div className="container">
             <div className="row">
               <div className="col-lg-4 col-md-6 col-sm-12">
@@ -184,9 +184,10 @@ const Footer = () => {
                         </span>
                         <h6 className="title">
                           <Link href="#" style={{ color: "#fff" }}>
-                            "Discover flavorful buttermilk masala that enhances
-                            every sip, supports digestion, and brings authentic
-                            Indian taste to your daily refreshment."
+                            "Discover powerful Ostro tile adhesive that
+                            strengthens every bond, ensures lasting durability,
+                            and delivers unmatched performance for every tile
+                            installation."
                           </Link>
                         </h6>
                       </div>
@@ -224,6 +225,9 @@ const Footer = () => {
                     </li>
                     <li>
                       <a href="/contact">Contact Us</a>
+                    </li>
+                    <li>
+                      <a href="/privacy-policy">Privacy Policy</a>
                     </li>
                   </ul>
                 </div>
@@ -291,7 +295,7 @@ const Footer = () => {
                 <div className="copyright-text">
                   <p>
                     Copyright &copy; 2025. All rights reserved to{" "}
-                    <span>GrayPix Studio</span>
+                    <span>GreyPix Studio</span>
                   </p>
                 </div>
               </div>
@@ -299,13 +303,10 @@ const Footer = () => {
                 <div className="copyright-link">
                   <ul>
                     <li>
-                      <a href="#">Terms & Conditins</a>
+                      <Link href="#">Terms & Conditions</Link>
                     </li>
                     <li>
-                      <a href="#">Services</a>
-                    </li>
-                    <li>
-                      <a href="#">Career</a>
+                      <Link href="#">Privacy Policy</Link>
                     </li>
                   </ul>
                 </div>

@@ -266,7 +266,7 @@ button {
   display: inline-flex;
   position: relative;
   z-index: 1;
-  background-color: #39B54A; 
+  background-color: #B62025; 
   padding: 16px 40px;
   color: #fff;
   font-family: "Opensans", sans-serif;
@@ -290,7 +290,7 @@ button {
   width: 100%;
   height: 100%;
   content: "";
-  background-color: #160E41;
+  background-color: #4D4E4E;
   z-index: -1;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
@@ -385,7 +385,7 @@ button {
   display: inline-flex;
   position: relative;
   z-index: 1;
-  background-color: #160E41;
+  background-color: #4D4E4E;
   padding: 8px 15px;
   color: #fff;
   font-family: "Opensans", sans-serif;
@@ -440,6 +440,9 @@ button {
   justify-content: center;  /* Center content horizontally */
   align-items: center;      /* Center content vertically */
   text-align: center;       /* Center text */
+  background-color: #FFF;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* YourStylesheet.css */
@@ -539,7 +542,7 @@ button {
   height: 50px;
 }
 #search-modal .form_control:focus {
-  border-color: #39B54A;
+  border-color: #B62025;
 }
 #search-modal .form_control::-webkit-input-placeholder {
   color: #fff;
@@ -626,7 +629,7 @@ button {
     Start scroll_up css
 */
 .back-to-top {
-  background: #39B54A;
+  background: #B62025;
   border-radius: 50%;
   bottom: 30px;
   color: #fff;
@@ -660,15 +663,15 @@ button {
 }
 
 .contact-information-list .information-item .info p a:hover, .copyright-area .copyright-link ul li a:hover, .footer-widget .widget.categories-widget ul.categories-link li a:hover, .footer-widget .widget.recent-post-widget .post-widget-list .post-content-item .post-title-date h6.title:hover, .sidebar-widget-area .widget.business-hour-widget ul.time-info li span.st-close, .sidebar-widget-area .widget.recent-post-widget .recent-post-list .post-thumbnail-content .post-title-date h6:hover, .sidebar-widget-area .widget.recent-post-widget .recent-post-list .post-thumbnail-content .post-title-date .posted-on i, .sidebar-widget-area .widget.search-widget form .form_group i, .blog-details-wrapper .comments-area .comments-list .comment .comment-wrap .comment-author-content .reply, .blog-details-wrapper .post-navigation .post-nav-item h5:hover, .blog-details-wrapper .entry-content .list li:before, .blog-details-wrapper .entry-content .fioxen-blockquote h6, .blog-details-wrapper .entry-content p span, .blog-post-item-four .entry-content h3.title:hover, .blog-post-item-four .entry-content .post-meta ul li span i, .blog-post-item-four .entry-content .post-meta ul li span:hover, .blog-post-item-three .entry-content .post-meta ul li span i, .blog-post-item-three .entry-content h3.title:hover, .blog-post-item-two .entry-content h3.title:hover, .blog-post-item-one .entry-content .post-meta ul li span i, .blog-post-item-one .entry-content .cat-btn:hover, .blog-post-item-one .entry-content h3.title:hover, .post-meta ul li span a:hover, .btn-link:hover, .description-wrapper .products-review-form .ratings li:hover i, .description-wrapper .products-review-area ul.review-list .review .review-content .reply:hover, .product-details-wrapper .product-info .product-meta .wishlist-btn, .product-details-wrapper .product-info span.price, .products-item-one .product-info span.price, .products-filter .sort-dropdown .show-text p, .add-listing-form.upload-listing-form .upload-content .upload-title-icon span, .listing-details-wrapper.listing-details-wrapper-two .listing-info-area .listing-info-content .listing-meta ul li span i, .listing-details-wrapper .listing-review-box .review-list .review .review-content .content-meta .reply, .listing-details-wrapper .listing-content p.para, .listing-list-item-two .listing-content .listing-meta ul span i, .listing-list-item-one .listing-content .listing-meta ul span i, .listing-grid-item-two .listing-content .listing-meta ul span i, .listing-grid-one .listing-content .listing-meta ul span i, .listing-grid-one .listing-content span.phone-meta:hover, .listing-item .listing-content span.phone-meta:hover, .listing-item .listing-content h3.title:hover, .single-checkbox label:after, .newsletter-wrapper .newsletter-form i, .intro-wrppaer-two .play-content .video-popup, .intro-wrapper-one .play-content-one .video-popup i, .counter-item-one .info h3, ul.ratings.ratings-five li.star:nth-child(5) i, ul.ratings.ratings-five li.star:nth-child(4) i, ul.ratings.ratings-five li.star:nth-child(3) i, ul.ratings.ratings-five li.star:nth-child(2) i, ul.ratings.ratings-five li.star:nth-child(1) i, ul.ratings.ratings-four li.star:nth-child(4) i, ul.ratings.ratings-four li.star:nth-child(3) i, ul.ratings.ratings-four li.star:nth-child(2) i, ul.ratings.ratings-four li.star:nth-child(1) i, ul.ratings.ratings-three li.star:nth-child(3) i, ul.ratings.ratings-three li.star:nth-child(2) i, ul.ratings.ratings-three li.star:nth-child(1) i, ul.ratings.ratings-two li.star:nth-child(2) i, ul.ratings.ratings-two li.star:nth-child(1) i, ul.ratings.ratings-one li.star:nth-child(1) i, .work-process-wrapper .single-process-step .process-content-box .step-count, .icon-box-one .icon i, .features-item-two .icon i, .features-item-one .icon i, .category-item-three:hover .info h4.title, .category-item-three:hover .icon i, .category-item-one:hover .info .icon i, .hero-wrapper-three .hero-content p.tags span, .header-area .header-top .top-right ul li a:hover, .header-area .header-top .top-content p a, .header-area .header-top .top-social ul.social-link li a:hover, .section-title span.sub-title {
-  color: #39B54A;
+  color: #B62025;
 }
 
 .copyright-area .copyright-text p span, .hero-wrapper-two .hero-content p.tags span {
-  color: #39B54A;
+  color: #B62025;
 }
 
 .contact-information-list .information-item .icon, .footer-widget .widget.about-widget .footer-social ul.social-link li a:hover, .sidebar-widget-area .widget.contact-info-widget .contact-info-content .social-link li a:hover, .sidebar-widget-area .widget.contact-info-widget .contact-map .support-icon, .sidebar-widget-area .widget.tag-cloud-widget a:hover, .sidebar-widget-area .widget.categories-widget .categories-nav li a:hover, .blog-details-wrapper .comments-respond .single-checkbox input:checked + label:before, .blog-details-wrapper .entry-content .post-tag a:hover, .blog-details-wrapper .entry-content .post-meta, .blog-post-item-four .entry-content .cat-btn, .description-wrapper .description-tabs .nav-tabs .nav-link:after, .product-details-wrapper .products-gallery-slider .slick-arrow, .products-item-one .product-img .product-overlay .product-meta .icon:hover, .products-filter .list li a.active, .products-filter .list li a:hover, .place-item-two .place-thumbnail .place-overlay .place-content .icon, .place-item-two .place-thumbnail .place-overlay .place-content .info span.span:before, .place-item-one .place-thumbnail .place-content span.listing, .add-listing-form h4.title:after, .add-listing-form h4.title:before, .listing-details-wrapper.listing-details-wrapper-two .listing-info-area .button .icon-btn:hover, .listing-details-wrapper .listing-rating-box .single-average-rating span.rating, .listing-details-wrapper .listing-tag-box a:hover, .listing-list-item-two .listing-thumbnail .thumbnail-meta .meta-icon-title .icon, .listing-list-item-one .listing-thumbnail .cat-btn, .listing-tab-filter .nav-link.active, .listing-grid-item-two .listing-thumbnail .cat-btn, .listing-grid-one .listing-thumbnail .thumbnail-meta .meta-icon-title .icon, .listing-slider-one .slick-arrow:hover, .listing-search-filter .filter-right ul.filter-nav li a.active, .listing-search-filter .filter-right ul.filter-nav li a:hover, .featured-btn, .fioxen-pagination .pagination-list li a.active, .fioxen-pagination .pagination-list li a:hover, .single-checkbox input:checked + label:before, .download-content-box-one ul.button li .app-btn:hover, .features-list-one .list-item .icon, .category-item-three .info h4.title a:after, .category-item-one .category-btn, .breadcrumbs-wrapper-one .button .icon-btn:hover, .hero-wrapper-three .hero-search-wrapper .search-nav .nav-link.active {
-  background-color: #39B54A;
+  background-color: #B62025;
 }
 
 .products-item-one .product-img .product-overlay .product-meta .icon, .products-filter .list li a {
@@ -719,7 +722,7 @@ button {
   }
 }
 .header-navigation .main-menu ul > li.has-children > a.active:after {
-  color: #39B54A;
+  color: #B62025;
 }
 .header-navigation .main-menu ul > li.has-children .sub-menu li.has-children:hover > a:after {
   color: #fff;
@@ -755,7 +758,7 @@ button {
   line-height: 1;
 }
 .header-navigation .main-menu ul li > a.active {
-  color: #39B54A;
+  color: #B62025;
 }
 .header-navigation .main-menu ul li.nav-btn {
   display: none;
@@ -803,7 +806,7 @@ button {
   color: #1b3255;
 }
 .header-navigation .main-menu ul li .sub-menu li a:hover {
-  background-color: #39B54A;
+  background-color: #B62025;
   color: #fff;
   border-color: transparent;
 }
@@ -815,14 +818,14 @@ button {
   top: 0%;
 }
 .header-navigation .main-menu ul li .sub-menu li:hover > a {
-  background-color: #39B54A;
+  background-color: #B62025;
   color: #fff;
 }
 .header-navigation .main-menu ul li:hover.menu-item-has-children > a:after {
-  color: #39B54A;
+  color: #B62025;
 }
 .header-navigation .main-menu ul li:hover > a {
-  color: #39B54A;
+  color: #B62025;
 }
 .header-navigation .main-menu ul li:hover > .sub-menu {
   opacity: 1;
@@ -982,7 +985,7 @@ button {
   line-height: 40px;
   display: none;
   cursor: pointer;
-  background: #39B54A;
+  background: #B62025;
   padding-top: 3px;
 }
 .header-navigation .navbar-close i {
@@ -1322,16 +1325,16 @@ button {
   color: #fff;
 }
 .header-area-three .header-navigation .main-menu ul > li.has-children > a.active:after {
-  color: #39B54A;
+  color: #B62025;
 }
 .header-area-three .header-navigation .main-menu ul li a {
   color: #fff;
 }
 .header-area-three .header-navigation .main-menu ul li:hover.has-children > a:after {
-  color: #39B54A;
+  color: #B62025;
 }
 .header-area-three .header-navigation .main-menu ul li:hover > a {
-  color: #39B54A;
+  color: #B62025;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-area-three .header-navigation .header-right-nav ul li .main-btn {
@@ -1458,23 +1461,23 @@ button {
   content: "";
   height: 100%;
 }
-.hero-wrapper-one:after {
+/* .hero-wrapper-one:after {
   width: 43.5%;
   right: 0;
   background: url(../images/hero/hero-one-bg-2.jpg) no-repeat center center;
   background-size: cover;
-}
+} */
 @media (max-width: 991px) {
   .hero-wrapper-one:after {
     display: none;
   }
 }
-.hero-wrapper-one:before {
+/* .hero-wrapper-one:before {
   width: 56.5%;
   left: 0;
   background: url(../images/hero/hero-one-bg-1.jpg) no-repeat center center;
   background-size: cover;
-}
+} */
 @media (max-width: 991px) {
   .hero-wrapper-one:before {
     width: 100%;
@@ -1680,16 +1683,11 @@ button {
   height: 100%;
   background: url(../images/bg/breadcrumbs-bg-1.jpg) no-repeat center;
   background-size: cover;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: -1; /* Push it behind the content */
+  background-color: red;
+  z-index: -1; 
   transform: translate(-50%, -50%);
-  filter: blur(5px); /* 👈 Add this for blur effect */
+  filter: blur(1px); 
 }
-/* .breadcrumbs-wrapper:before {
-  left: 0;
-  background: url(../images/bg/breadcrumbs-bg-1.jpg) no-repeat center;
-  background-size: cover;
-} */
 @media (max-width: 991px) {
   .breadcrumbs-wrapper:before {
     width: 100%;
@@ -2062,7 +2060,7 @@ button {
   content: "";
   width: 180px;
   height: 180px;
-  background-color: #39B54A;
+  background-color: #B62025;
   z-index: -1;
 }
 @media (max-width: 991px) {
@@ -2073,7 +2071,7 @@ button {
 
 .features-content-box-one h5 {
   margin-bottom: 35px;
-  color: #39B54A;
+  color: #B62025;
   font-weight: 500;
 }
 
@@ -2114,7 +2112,7 @@ button {
   content: "";
   width: 60px;
   height: 60px;
-  border: 1px solid #39B54A;
+  border: 1px solid #B62025;
   border-radius: 3px;
 }
 .features-list-one .list-item .icon i {
@@ -2174,7 +2172,7 @@ button {
   content: "";
   width: 180px;
   height: 180px;
-  background-color: #39B54A;
+  background-color: #B62025;
   z-index: -1;
 }
 @media (max-width: 991px) {
@@ -2956,7 +2954,7 @@ span.status.st-open {
   background-color: #35c54c;
 }
 span.status.st-close {
-  background-color: #39B54A;
+  background-color: #B62025;
 }
 
 h3.title {
@@ -3076,7 +3074,7 @@ h3.title {
   width: 0;
   height: 0;
   content: "";
-  border-bottom: 15px solid #39B54A;
+  border-bottom: 15px solid #B62025;
   border-right: 13.01px solid transparent;
 }
 .listing-grid-one .listing-thumbnail img {
@@ -3736,7 +3734,7 @@ h3.title {
   margin-right: 10px;
 }
 .listing-details-wrapper .listing-review-form .form-rating .ratings li:hover i {
-  color: #39B54A;
+  color: #B62025;
 }
 .listing-details-wrapper .listing-review-form .form_control {
   border: 1px solid #efefef;
@@ -3749,7 +3747,7 @@ h3.title {
   margin-bottom: 30px;
 }
 .listing-details-wrapper .listing-review-form .single-checkbox label:before {
-  border: 1px solid #39B54A;
+  border: 1px solid #B62025;
 }
 .listing-details-wrapper .listing-play-box h4.title {
   margin-bottom: 35px;
@@ -4046,7 +4044,7 @@ h3.title {
   margin-right: 5px;
 }
 .place-slider-one .slick-dots li.slick-active button {
-  background-color: #39B54A;
+  background-color: #B62025;
 }
 .place-slider-one .slick-dots li button {
   width: 12px;
@@ -4601,7 +4599,7 @@ h3.title {
 }
 .description-wrapper .products-review-form .form_control:focus {
   background-color: #fff;
-  border-color: #39B54A;
+  border-color: #B62025;
 }
 .description-wrapper .products-review-form textarea.form_control {
   height: 200px;
@@ -4756,7 +4754,7 @@ h3.title {
   position: absolute;
   bottom: -100%;
   left: 20px;
-  background-color: #39B54A;
+  background-color: #B62025;
   padding: 38px 15px 33px;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
@@ -4901,7 +4899,7 @@ h3.title {
   }
 }
 .blog-post-item-two .entry-content .cat-btn {
-  background-color: #39B54A;
+  background-color: #B62025;
   font-weight: 600;
   color: #fff;
   line-height: 20px;
@@ -5371,14 +5369,14 @@ h3.title {
   border-radius: 0px;
 }
 .sidebar-widget-area .widget .price-range-widget .ui-widget .ui-slider-range {
-  background-color: #39B54A;
+  background-color: #B62025;
 }
 .sidebar-widget-area .widget .price-range-widget .ui-widget .ui-slider-handle {
   top: -6px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #39B54A;
+  background-color: #B62025;
   border: none;
 }
 .sidebar-widget-area .widget .price-range-widget .price-number {
@@ -5547,7 +5545,7 @@ h3.title {
   margin-right: 10px;
 }
 .app-btn .icon i {
-  color: #39B54A;
+  color: #B62025;
 }
 .app-btn .info {
   line-height: 1;
@@ -5576,7 +5574,7 @@ h3.title {
   display: inline-block;
 }
 .footer-widget .widget.about-widget ul.button li .app-btn:hover {
-  background-color: #39B54A;
+  background-color: #B62025;
   color: #fff;
 }
 .footer-widget .widget.about-widget ul.button li .app-btn:hover .icon i {
@@ -5654,7 +5652,7 @@ h3.title {
   color: #fff;
 }
 .footer-widget .widget.newsletter-widget form .main-btn:hover:before {
-  background-color: #39B54A;
+  background-color: #B62025;
 }
 
 .copyright-area {

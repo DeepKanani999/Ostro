@@ -70,15 +70,15 @@ const ProductDetailsClient = ({ item }) => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919726594265"; // Replace with your number
+    window.location.href = "tel:+919942500600"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/K2WbFgvgbXR13jTj7", "_blank");
+    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = "919726594265"; // Replace with your number
+    const phoneNumber = "919942500600"; // Replace with your number
     const defaultMessage = `Hi, I'm interested in your products. Could you please provide more details?`;
 
     const encodedMessage = encodeURIComponent(defaultMessage);
@@ -89,7 +89,7 @@ const ProductDetailsClient = ({ item }) => {
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:somixafoodsllp@gmail.com"; // Replace with your email
+    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
@@ -153,8 +153,8 @@ const ProductDetailsClient = ({ item }) => {
 
     const userInfo = sessionStorage.getItem("userInfo");
     if (isMobile) {
-      const phoneNumber = "919726594265";
-      const imageUrl = `https://somixa.in/${item?.image}`;
+      const phoneNumber = "919942500600";
+      const imageUrl = `https://www.ostrocemex.com/${item?.image}`;
 
       // Create a message with product details and image URL
       const message = `*Product Inquiry*
@@ -186,8 +186,8 @@ const ProductDetailsClient = ({ item }) => {
       if (!userInfo) {
         setIsPopupOpen(true);
       } else {
-        const phoneNumber = "919726594265";
-        const imageUrl = `https://somixa.in/${item?.image}`;
+        const phoneNumber = "919942500600";
+        const imageUrl = `https://www.ostrocemex.com/${item?.image}`;
 
         // Create a message with product details and image URL
         const message = `*Product Inquiry*
@@ -305,7 +305,7 @@ const ProductDetailsClient = ({ item }) => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/phone_black.png"
+                      src="/assets/images/black-icons/Call Us.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -335,7 +335,7 @@ const ProductDetailsClient = ({ item }) => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/location_black.png"
+                      src="/assets/images/black-icons/Location.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -376,7 +376,7 @@ const ProductDetailsClient = ({ item }) => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/whatsapp_black.png"
+                      src="/assets/images/black-icons/whatsapp.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -406,7 +406,7 @@ const ProductDetailsClient = ({ item }) => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/gmail_black.png"
+                      src="/assets/images/black-icons/email.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -416,39 +416,43 @@ const ProductDetailsClient = ({ item }) => {
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
-              <div style={{ display: "flex", gap: "10px" }}>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleFacebook}
-                  style={{ padding: "8px", backgroundColor: "#3A559F" }}
+              <div
+                  style={{ display: "flex", gap: "10px", marginLeft: "20px" }}
                 >
-                  <img src="/assets/images/icons/facebook.png" alt="Facebook" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleInstagram}
-                  style={{ padding: "8px", backgroundColor: "#D03B98" }}
-                >
-                  <img
-                    src="/assets/images/icons/instagram.png"
-                    alt="Instagram"
-                  />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleLinkedIn}
-                  style={{ padding: "8px", backgroundColor: "#0B63BD" }}
-                >
-                  <img src="/assets/images/icons/linkedin.png" alt="LinkedIn" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleShare}
-                  style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                >
-                  <img src="/assets/images/icons/share.png" alt="Share" />
-                </button>
-              </div>
+                  <button
+                    className="social-rounded-btn"
+                    onClick={handleFacebook}
+                  >
+                    <img
+                      src="/assets/images/social-media-icons/Facebook.svg"
+                      alt="Facebook"
+                    />
+                  </button>
+                  <button
+                    className="social-rounded-btn"
+                    onClick={handleInstagram}
+                  >
+                    <img
+                      src="/assets/images/social-media-icons/Instagram.svg"
+                      alt="Instagram"
+                    />
+                  </button>
+                  <button
+                    className="social-rounded-btn"
+                    onClick={handleLinkedIn}
+                  >
+                    <img
+                      src="/assets/images/social-media-icons/Linkedin.svg"
+                      alt="LinkedIn"
+                    />
+                  </button>
+                  <button className="social-rounded-btn" onClick={handleShare}>
+                    <img
+                      src="/assets/images/social-media-icons/Share.svg"
+                      alt="Share"
+                    />
+                  </button>
+                </div>
             </div>
           </div>
         </div>
@@ -468,7 +472,7 @@ const ProductDetailsClient = ({ item }) => {
             >
               <div
                 style={{
-                  width: isMobile ? "100%" : "50%",
+                  // width: isMobile ? "100%" : "100%",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -481,7 +485,7 @@ const ProductDetailsClient = ({ item }) => {
                   src={item?.image}
                   alt={item?.name || "Product Image"}
                   style={{
-                    width: "100%",
+                    width: "350px",
                     height: "auto",
                     objectFit: "contain",
                     borderRadius: "10px",
@@ -650,7 +654,11 @@ const ProductDetailsClient = ({ item }) => {
                 <div className="tab-content mt-30">
                   {activeTab === "description" && (
                     <div className="description-content-box">
-                      <p>{item?.discription}</p>
+                      {item.discription.map((paragraph, index) => (
+                        <p key={index} style={{ marginBottom: "20px" }}>
+                          {paragraph}
+                        </p>
+                      ))}
                     </div>
                   )}
                   {activeTab === "reviews" && (
@@ -831,9 +839,13 @@ const ProductDetailsClient = ({ item }) => {
                   <div
                     className="listing-thumbnail"
                     style={{
-                      backgroundColor: item.backgroundColor,
+                      backgroundColor: `${item.backgroundColor}`,
                       borderTopLeftRadius: "10px",
                       borderTopRightRadius: "10px",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      display: "flex",
+                      height: "400px",
                     }}
                   >
                     <Link href={`/product-details/${item.slug}`}>
@@ -844,22 +856,26 @@ const ProductDetailsClient = ({ item }) => {
                     </Link>
                     <span
                       className="featured-btn"
-                      style={{ borderRadius: "5px" }}
+                      style={{
+                        borderRadius: "5px",
+                        fontSize: "10px",
+                        padding: "3px 10px",
+                      }}
                     >
                       Featured
                     </span>
                   </div>
                   <div className="listing-content">
-                    {/* <h3 className="title">
+                    <h3 className="title">
                       <Link href={`/product-details/${item.slug}`}>
                         {item.name}
                       </Link>{" "}
-                    </h3> */}
+                    </h3>
                     <p
                       style={{
                         display: "-webkit-box",
                         WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3,
+                        WebkitLineClamp: 5,
                         overflow: "hidden",
                         textOverflow: "ellipsis",
                         maxWidth: "300px",
@@ -869,20 +885,6 @@ const ProductDetailsClient = ({ item }) => {
                     >
                       {item.detail}
                     </p>{" "}
-                    {/* <div className="features-list">
-                      <ul>
-                        {" "}
-                        <li
-                          style={{
-                            color: "#000",
-                            fontSize: "16px",
-                            fontWeight: "bold",
-                          }}
-                        >
-                          {"Smart TV"}
-                        </li>
-                      </ul>
-                    </div> */}
                     <span className="phone-meta"></span>
                     <div className="listing-meta">
                       <ul
@@ -903,20 +905,21 @@ const ProductDetailsClient = ({ item }) => {
                             }}
                           >
                             <div
-                              className="flex items-center gap-2 px-3 py-1 mt-1 mb-4 border border-gray-300 rounded-lg transition"
+                              className="flex items-center gap-2 px-3 py-1 mt-1 mb-3 rounded-lg transition"
                               style={{
-                                backgroundColor: "#39B54A",
+                                backgroundColor: "#FFF",
+                                border: "1px solid #B62025",
+                                borderColor: "#B62025",
                                 display: "flex",
                                 flexDirection: "row",
                                 alignItems: "center",
                                 justifyContent: "center",
-                                marginBottom: "30px",
-                                width: "100%", // Makes the button take full width
+                                width: "100%",
                               }}
                             >
                               <span
-                                className="underline text-white"
-                                style={{ fontSize: "20px" }}
+                                className="underline"
+                                style={{ fontSize: "18px", color: "#B62025" }}
                               >
                                 View Details
                               </span>

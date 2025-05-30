@@ -63,27 +63,33 @@ const Contact = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919726594265"; // Replace with your number
+    window.location.href = "tel:+919942500600"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/K2WbFgvgbXR13jTj7", "_blank");
+    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
   };
 
   const handleWhatsApp = () => {
-    window.open("https://wa.me/919726594265", "_blank"); // Replace with your number
+    window.open("https://wa.me/919942500600", "_blank"); // Replace with your number
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:somixafoodsllp@gmail.com"; // Replace with your email
+    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
-    window.open("https://www.facebook.com/decorafurnitureofficial/?_rdr", "_blank");
+    window.open(
+      "https://www.facebook.com/decorafurnitureofficial/?_rdr",
+      "_blank"
+    );
   };
 
   const handleInstagram = () => {
-    window.open("https://www.instagram.com/decorafurniture_official/", "_blank");
+    window.open(
+      "https://www.instagram.com/decorafurniture_official/",
+      "_blank"
+    );
   };
 
   const handleLinkedIn = () => {
@@ -263,7 +269,7 @@ const Contact = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/phone_black.png"
+                      src="/assets/images/black-icons/Call Us.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -293,7 +299,7 @@ const Contact = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/location_black.png"
+                      src="/assets/images/black-icons/Location.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -334,7 +340,7 @@ const Contact = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/whatsapp_black.png"
+                      src="/assets/images/black-icons/whatsapp.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -364,7 +370,7 @@ const Contact = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/gmail_black.png"
+                      src="/assets/images/black-icons/email.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -374,39 +380,43 @@ const Contact = () => {
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
-              <div style={{ display: "flex", gap: "10px" }}>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleFacebook}
-                  style={{ padding: "8px", backgroundColor: "#3A559F" }}
+              <div
+                  style={{ display: "flex", gap: "10px", marginLeft: "20px" }}
                 >
-                  <img src="/assets/images/icons/facebook.png" alt="Facebook" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleInstagram}
-                  style={{ padding: "8px", backgroundColor: "#D03B98" }}
-                >
-                  <img
-                    src="/assets/images/icons/instagram.png"
-                    alt="Instagram"
-                  />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleLinkedIn}
-                  style={{ padding: "8px", backgroundColor: "#0B63BD" }}
-                >
-                  <img src="/assets/images/icons/linkedin.png" alt="LinkedIn" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleShare}
-                  style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                >
-                  <img src="/assets/images/icons/share.png" alt="Share" />
-                </button>
-              </div>
+                  <button
+                    className="social-rounded-btn"
+                    onClick={handleFacebook}
+                  >
+                    <img
+                      src="/assets/images/social-media-icons/Facebook.svg"
+                      alt="Facebook"
+                    />
+                  </button>
+                  <button
+                    className="social-rounded-btn"
+                    onClick={handleInstagram}
+                  >
+                    <img
+                      src="/assets/images/social-media-icons/Instagram.svg"
+                      alt="Instagram"
+                    />
+                  </button>
+                  <button
+                    className="social-rounded-btn"
+                    onClick={handleLinkedIn}
+                  >
+                    <img
+                      src="/assets/images/social-media-icons/Linkedin.svg"
+                      alt="LinkedIn"
+                    />
+                  </button>
+                  <button className="social-rounded-btn" onClick={handleShare}>
+                    <img
+                      src="/assets/images/social-media-icons/Share.svg"
+                      alt="Share"
+                    />
+                  </button>
+                </div>
             </div>
           </div>
         </div>
@@ -429,8 +439,8 @@ const Contact = () => {
                   <div className="info">
                     <h5>Address</h5>
                     <p>
-                    Maruti Ind. Area, Shed No1, 30 Ft. Road, Near Pgvcl Office,
-                    Vavdi, Rajkot, Gujarat - 360004
+                      FP No - 274, TP No - 229, Nr. Shilpgram I, Gate No - 2,
+                      Jaspur, Kalol, Gandhinagar, 382721. Gujarat
                     </p>
                   </div>
                 </div>
@@ -441,7 +451,7 @@ const Contact = () => {
                   <div className="info">
                     <h5>Phone</h5>
                     <p>
-                      <a href="tel:+91 9726594265">+91 9726594265</a>
+                      <a href="tel:+91 9942500600">+91 9942500600</a>
                     </p>
                   </div>
                 </div>
@@ -452,7 +462,9 @@ const Contact = () => {
                   <div className="info">
                     <h5>Email</h5>
                     <p>
-                      <a href="mailto:somixafoodsllp@gmail.com">somixafoodsllp@gmail.com</a>
+                      <a href="mailto:ostrocemex@gmail.com">
+                        ostrocemex@gmail.com
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -552,7 +564,7 @@ const Contact = () => {
       {/*====== Start Map section ======*/}
       <div className="contact-page-map">
         <div className="map-box">
-          <iframe src="https://maps.google.com/maps?q=Maruti+Industrial+Area,+Vavdi,+Rajkot,+Gujarat+360004&t=&z=13&ie=UTF8&iwloc=&output=embed" />
+          <iframe src="https://maps.google.com/maps?q=Jaspur,+Gujarat&t=&z=13&ie=UTF8&iwloc=&output=embed" />
         </div>
       </div>
       {/*====== End Map section ======*/}

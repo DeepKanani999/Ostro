@@ -15,25 +15,32 @@ import BottomTab from "@/components/BottomBar";
 import UserInfoPopup from "@/components/userDetailPopup";
 
 const heroImages = [
-  "/assets/images/Hero-Banner/TV-setup-1.jpg",
-  "/assets/images/Hero-Banner/TV-setup-2.jpg",
+  "/assets/images/Hero-Banner/ostro_hero_banner-1.jpg",
+  "/assets/images/Hero-Banner/ostro_hero_banner-2.jpg",
+  "/assets/images/Hero-Banner/ostro_hero_banner-3.jpg",
 ];
 
 const populerSearches = [
-  "Best buttermilk masala 2025",
-  "Buy chaas masala online",
-  "Traditional spice blends",
-  "Digestive spice mix",
-  "Healthy summer drinks",
-  "Spices for buttermilk",
-  "Chaas masala benefits",
-  "Homemade chaas recipe",
-  "Spiced buttermilk ideas",
-  "Natural drink enhancers",
-  "Daily digestive masala",
-  "Indian masala powders",
-  "Somixa product reviews",
-  "How to make tasty chaas",
+  "Best tile adhesive",
+  "Ostro adhesive reviews",
+  "Strongest tile glue",
+  "Waterproof tile adhesive",
+  "Wall vs floor adhesive",
+  "Ostro ceramic adhesive",
+  "Apply tile adhesive",
+  "Top adhesive brands",
+  "Heatproof tile glue",
+  "Fast-dry adhesive",
+  "Ostro vs competitors",
+  "Outdoor tile adhesive",
+  "Adhesive for marble/granite",
+  "Crackproof tile glue",
+  "Ostro adhesive price",
+  "Tile adhesive guide",
+  "Long-lasting adhesive",
+  "Cement vs ready-mix adhesive",
+  "Eco-friendly tile glue",
+  "Vertical tile bonding",
 ];
 
 const carouselSettings = {
@@ -122,29 +129,30 @@ export function SocialStoriesSection() {
 
 const faqs = [
   {
-    question: "What is Somixa Buttermilk Masala made of?",
+    question: "What makes Ostro Tile Adhesive different from other brands?",
     answer:
-      "Somixa Buttermilk Masala is a blend of carefully selected spices and herbs, including cumin, ginger, rock salt, and more, crafted to give your buttermilk a refreshing and authentic taste.",
+      "Ostro Tile Adhesive is engineered for superior bonding strength, long-lasting durability, and excellent workability—perfect for all types of tile installations.",
   },
   {
-    question: "How do I use Somixa Masala?",
+    question: "Where can Ostro Tile Adhesive be used?",
     answer:
-      "Simply add a spoonful of Somixa Masala to your chilled buttermilk (chaas), stir well, and enjoy. It can also be used to enhance the flavor of other drinks and savory dishes.",
+      "Ostro is ideal for fixing ceramic, vitrified, porcelain, glass mosaic, natural stone, and large-format tiles on floors and walls—indoors and outdoors.",
   },
   {
-    question: "Is Somixa suitable for daily use?",
+    question:
+      "Is Ostro adhesive suitable for wet areas like bathrooms and kitchens?",
     answer:
-      "Yes, Somixa is made with natural ingredients and is perfect for everyday consumption. It helps aid digestion and adds a delicious punch to your daily chaas.",
+      "Yes, Ostro offers water-resistant adhesives specifically designed for wet and high-moisture areas such as bathrooms, kitchens, and swimming pools.",
   },
   {
-    question: "Do you offer different flavors or spice levels?",
+    question: "How long does it take for Ostro Tile Adhesive to set?",
     answer:
-      "Currently, we offer our signature blend, crafted to appeal to a wide range of taste buds. We’re also working on introducing more variants soon based on customer preferences.",
+      "Typically, it takes 24 hours for full curing, but initial setting begins within 4–6 hours depending on environmental conditions.",
   },
   {
-    question: "Where can I buy Somixa products?",
+    question: "Can Ostro adhesive be used on existing tiles?",
     answer:
-      "Somixa Masala is available online and in select retail stores. You can also order directly through our website or partner marketplaces for COD.",
+      "Somixa Masala is available online and in select retail stores. You can also order directly through our website or partner marketplaces for home delivery.",
   },
 ];
 
@@ -171,7 +179,7 @@ export function FAQSection() {
               onClick={() => setOpenIndex(openIndex === idx ? -1 : idx)}
             >
               <span className="flex-1">{faq.question}</span>
-              <span className="text-3xl ml-4" style={{ color: "#39B54A" }}>
+              <span className="text-3xl ml-4" style={{ color: "#B62025" }}>
                 {openIndex === idx ? "−" : "+"}
               </span>
             </button>
@@ -257,15 +265,15 @@ const HomeScreen = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919726594265"; // Replace with your number
+    window.location.href = "tel:+919942500600"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/K2WbFgvgbXR13jTj7", "_blank");
+    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
   };
 
   const handleWhatsApp = () => {
-    const phoneNumber = "919726594265"; // Replace with your number
+    const phoneNumber = "919942500600"; // Replace with your number
     const defaultMessage = `Hi, I'm interested in your products. Could you please provide more details?`;
 
     const encodedMessage = encodeURIComponent(defaultMessage);
@@ -276,7 +284,7 @@ const HomeScreen = () => {
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:somixafoodsllp@gmail.com"; // Replace with your email
+    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
@@ -316,8 +324,8 @@ const HomeScreen = () => {
   const getPrice = (product) => {
     const userInfo = sessionStorage.getItem("userInfo");
     if (isMobile) {
-      const phoneNumber = "919726594265";
-      const imageUrl = `https://somixa.in/${product?.image}`;
+      const phoneNumber = "919942500600";
+      const imageUrl = `https://www.ostrocemex.com/${product?.image}`;
 
       // Create a message with product details and image URL
       const message = `*Product Inquiry*
@@ -349,8 +357,8 @@ const HomeScreen = () => {
       if (!userInfo) {
         setIsPopupOpen(true); // Open the popup if session data is not available
       } else {
-        const phoneNumber = "919726594265";
-        const imageUrl = `https://somixa.in/${product?.image}`;
+        const phoneNumber = "919942500600";
+        const imageUrl = `https://www.ostrocemex.com/${product?.image}`;
 
         // Create a message with product details and image URL
         const message = `*Product Inquiry*
@@ -395,8 +403,8 @@ const HomeScreen = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "flex-start",
-    background: "#160E41",
-    border: "2px solid #FFF",
+    background: "#4D4E4E",
+    border: "2px solid #4D4E4E",
     borderRadius: "10px",
     padding: "0 12px",
     width: "70%",
@@ -501,7 +509,7 @@ const HomeScreen = () => {
           <button onClick={handleCall} style={buttonStyle}>
             <div style={iconWrapperStyle}>
               <img
-                src="/assets/images/black-icons/phone_black.png"
+                src="/assets/images/black-icons/Call Us.svg"
                 alt="Call"
                 style={{ height: "20px", width: "20px" }}
               />
@@ -523,7 +531,7 @@ const HomeScreen = () => {
           >
             <div style={iconWrapperStyle}>
               <img
-                src="/assets/images/black-icons/whatsapp_black.png"
+                src="/assets/images/black-icons/whatsapp.svg"
                 alt="WhatsApp"
                 style={{ height: "20px", width: "20px" }}
               />
@@ -535,7 +543,7 @@ const HomeScreen = () => {
           <button onClick={handleLocation} style={buttonStyle}>
             <div style={iconWrapperStyle}>
               <img
-                src="/assets/images/black-icons/location_black.png"
+                src="/assets/images/black-icons/Location.svg"
                 alt="Location"
                 style={{ height: "20px", width: "20px" }}
               />
@@ -547,7 +555,7 @@ const HomeScreen = () => {
           <button onClick={handleMail} style={buttonStyle}>
             <div style={iconWrapperStyle}>
               <img
-                src="/assets/images/black-icons/gmail_black.png"
+                src="/assets/images/black-icons/email.svg"
                 alt="Mail"
                 style={{ height: "20px", width: "20px" }}
               />
@@ -635,7 +643,8 @@ const HomeScreen = () => {
         >
           <button
             onClick={() =>
-              window.open("https://g.page/r/CTjtIU0PHHR6EBM/review", "_blank")
+              // window.open("https://g.page/r/CTjtIU0PHHR6EBM/review", "_blank")
+              window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank")
             }
             style={{
               padding: "12px 20px",
@@ -728,7 +737,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/phone_black.png"
+                      src="/assets/images/black-icons/Call Us.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -758,7 +767,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/location_black.png"
+                      src="/assets/images/black-icons/Location.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -799,7 +808,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/whatsapp_black.png"
+                      src="/assets/images/black-icons/whatsapp.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -829,7 +838,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/gmail_black.png"
+                      src="/assets/images/black-icons/email.svg"
                       alt="Call"
                       style={{ height: "20px", width: "20px" }}
                     />
@@ -839,37 +848,33 @@ const HomeScreen = () => {
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
-              <div style={{ display: "flex", gap: "10px" }}>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleFacebook}
-                  style={{ padding: "8px", backgroundColor: "#3A559F" }}
-                >
-                  <img src="/assets/images/icons/facebook.png" alt="Facebook" />
-                </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleInstagram}
-                  style={{ padding: "8px", backgroundColor: "#D03B98" }}
-                >
+              <div style={{ display: "flex", gap: "10px", marginLeft: "20px" }}>
+                <button className="social-rounded-btn" onClick={handleFacebook}>
                   <img
-                    src="/assets/images/icons/instagram.png"
-                    alt="Instagram"
+                    src="/assets/images/social-media-icons/Facebook.svg"
+                    alt="Facebook"
                   />
                 </button>
                 <button
                   className="social-rounded-btn"
-                  onClick={handleLinkedIn}
-                  style={{ padding: "8px", backgroundColor: "#0B63BD" }}
+                  onClick={handleInstagram}
                 >
-                  <img src="/assets/images/icons/linkedin.png" alt="LinkedIn" />
+                  <img
+                    src="/assets/images/social-media-icons/Instagram.svg"
+                    alt="Instagram"
+                  />
                 </button>
-                <button
-                  className="social-rounded-btn"
-                  onClick={handleShare}
-                  style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                >
-                  <img src="/assets/images/icons/share.png" alt="Share" />
+                <button className="social-rounded-btn" onClick={handleLinkedIn}>
+                  <img
+                    src="/assets/images/social-media-icons/Linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleShare}>
+                  <img
+                    src="/assets/images/social-media-icons/Share.svg"
+                    alt="Share"
+                  />
                 </button>
               </div>
             </div>
@@ -925,7 +930,7 @@ const HomeScreen = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/phone_black.png"
+                        src="/assets/images/black-icons/Call Us.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -955,7 +960,7 @@ const HomeScreen = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/location_black.png"
+                        src="/assets/images/black-icons/Location.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -996,7 +1001,7 @@ const HomeScreen = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/whatsapp_black.png"
+                        src="/assets/images/black-icons/whatsapp.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -1026,7 +1031,7 @@ const HomeScreen = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/gmail_black.png"
+                        src="/assets/images/black-icons/email.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -1040,39 +1045,35 @@ const HomeScreen = () => {
                   <button
                     className="social-rounded-btn"
                     onClick={handleFacebook}
-                    style={{ padding: "8px", backgroundColor: "#3A559F" }}
                   >
                     <img
-                      src="/assets/images/icons/facebook.png"
+                      src="/assets/images/social-media-icons/Facebook.svg"
                       alt="Facebook"
                     />
                   </button>
                   <button
                     className="social-rounded-btn"
                     onClick={handleInstagram}
-                    style={{ padding: "8px", backgroundColor: "#D03B98" }}
                   >
                     <img
-                      src="/assets/images/icons/instagram.png"
+                      src="/assets/images/social-media-icons/Instagram.svg"
                       alt="Instagram"
                     />
                   </button>
                   <button
                     className="social-rounded-btn"
                     onClick={handleLinkedIn}
-                    style={{ padding: "8px", backgroundColor: "#0B63BD" }}
                   >
                     <img
-                      src="/assets/images/icons/linkedin.png"
+                      src="/assets/images/social-media-icons/Linkedin.svg"
                       alt="LinkedIn"
                     />
                   </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleShare}
-                    style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                  >
-                    <img src="/assets/images/icons/share.png" alt="Share" />
+                  <button className="social-rounded-btn" onClick={handleShare}>
+                    <img
+                      src="/assets/images/social-media-icons/Share.svg"
+                      alt="Share"
+                    />
                   </button>
                 </div>
                 <div
@@ -1084,13 +1085,17 @@ const HomeScreen = () => {
                 >
                   <button
                     onClick={() =>
+                      // window.open(
+                      //   "https://g.page/r/CTjtIU0PHHR6EBM/review",
+                      //   "_blank"
+                      // )
                       window.open(
-                        "https://g.page/r/CTjtIU0PHHR6EBM/review",
+                        "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
                         "_blank"
                       )
                     }
                     style={{
-                      padding: "12px 20px",
+                      padding: "9px 40px",
                       border: "1px solid #e0e0e0",
                       borderRadius: "8px",
                       backgroundColor: "white",
@@ -1145,8 +1150,7 @@ const HomeScreen = () => {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#160E41",
-                    border: "2px solid #FFF",
+                    background: "#4D4E4E",
                     borderRadius: "10px",
                     padding: "4px",
                     width: "100%", // Full width for buttons
@@ -1155,8 +1159,8 @@ const HomeScreen = () => {
                 >
                   <div
                     style={{
-                      height: "30px",
-                      width: "30px",
+                      height: "27px",
+                      width: "27px",
                       backgroundColor: "#FFF",
                       alignItems: "center",
                       justifyContent: "center",
@@ -1166,7 +1170,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/phone_black.png"
+                      src="/assets/images/black-icons/Call Us.svg"
                       alt="Call"
                       style={{
                         height: "17px",
@@ -1196,8 +1200,7 @@ const HomeScreen = () => {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#160E41",
-                    border: "2px solid #000",
+                    background: "#4D4E4E",
                     borderRadius: "10px",
                     padding: "4px",
                     width: "100%", // Full width for buttons
@@ -1217,7 +1220,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/whatsapp_black.png"
+                      src="/assets/images/black-icons/whatsapp.svg"
                       alt="WhatsApp"
                       style={{
                         height: "15px",
@@ -1238,8 +1241,7 @@ const HomeScreen = () => {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#160E41",
-                    border: "2px solid #000",
+                    background: "#4D4E4E",
                     borderRadius: "10px",
                     padding: "4px",
                     width: "100%", // Full width for buttons
@@ -1259,7 +1261,7 @@ const HomeScreen = () => {
                     }}
                   >
                     <img
-                      src="/assets/images/black-icons/location_black.png"
+                      src="/assets/images/black-icons/Location.svg"
                       alt="Location"
                       style={{
                         height: "18px",
@@ -1280,8 +1282,7 @@ const HomeScreen = () => {
                     flexDirection: "row",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#160E41",
-                    border: "2px solid #000",
+                    background: "#4D4E4E",
                     borderRadius: "10px",
                     padding: "4px",
                     width: "100%", // Full width for buttons
@@ -1318,7 +1319,7 @@ const HomeScreen = () => {
               >
                 <div className="listing-thumbnail mb-30 wow fadeInUp">
                   <img
-                    src="/assets/images/Hero-Banner/TV-setup-4.webp"
+                    src="/assets/images/Hero-Banner/home_about_us.jpg"
                     alt="listing image"
                   />
                 </div>
@@ -1332,16 +1333,14 @@ const HomeScreen = () => {
                       </div>
                     </div>
                   </div>
-                  <h3 className="title">{`Somixa – Flavorful Spice Blend for Refreshing Buttermilk`}</h3>
+                  <h3 className="title">{`At OSTRO, we’re building the future—one tile at a time.`}</h3>
                   <p>
-                    At Somixa, we reinvent the way you enjoy traditional flavors
-                    by blending authenticity, innovation, and quality
-                    ingredients. Our premium range of buttermilk masalas is
-                    crafted to elevate everyday meals with bold, refreshing
-                    taste rooted in India’s culinary heritage. Whether you're
-                    preparing a quick homemade chaas or enhancing a family
-                    recipe, Somixa delivers the perfect balance of spice and
-                    flavor to suit your lifestyle.
+                    Founded with a vision to revolutionize the surface finishing
+                    and bonding industry, OSTRO stands at the forefront of tile
+                    chemical innovation. From tile adhesives and grouts to
+                    waterproofing compounds and surface cleaners, we provide
+                    high-performance solutions that bring unmatched durability,
+                    resilience, and beauty to every surface.
                   </p>
                   <div className="row">
                     <div className="col-lg-4 col-md-6 col-sm-12">
@@ -1349,12 +1348,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-desktop"
-                            style={{ color: "#39B54A" }}
+                            style={{ color: "#B62025" }}
                           /> */}
                           <span style={{ fontSize: "25px" }}>🌿</span>
                         </div>
                         <div className="info">
-                          <h6>Spice That Refreshes, Flavor That Lasts</h6>
+                          <h6>New Bonding Formula</h6>
                         </div>
                       </div>
                     </div>
@@ -1363,12 +1362,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-volume"
-                            style={{ color: "#39B54A" }}
+                            style={{ color: "#B62025" }}
                           /> */}
                           <span style={{ fontSize: "25px" }}>🌿</span>
                         </div>
                         <div className="info">
-                          <h6>Authentic Taste in Every Sip</h6>
+                          <h6>Crystal Finish Compatibility</h6>
                         </div>
                       </div>
                     </div>
@@ -1377,12 +1376,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-desktop"
-                            style={{ color: "#39B54A" }}
+                            style={{ color: "#B62025" }}
                           /> */}
                           <span style={{ fontSize: "25px" }}>🌿</span>
                         </div>
                         <div className="info">
-                          <h6>Tradition Blended with Innovation</h6>
+                          <h6>Strong on Every Surface</h6>
                         </div>
                       </div>
                     </div>
@@ -1391,12 +1390,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-desktop"
-                            style={{ color: "#39B54A" }}
+                            style={{ color: "#B62025" }}
                           /> */}
                           <span style={{ fontSize: "25px" }}>🌿</span>
                         </div>
                         <div className="info">
-                          <h6>Crafting the Perfect Chaas Experience</h6>
+                          <h6>Dual Compatibility – Floor & Wall</h6>
                         </div>
                       </div>
                     </div>
@@ -1405,12 +1404,12 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-volume"
-                            style={{ color: "#39B54A" }}
+                            style={{ color: "#B62025" }}
                           /> */}
                           <span style={{ fontSize: "25px" }}>🌿</span>
                         </div>
                         <div className="info">
-                          <h6>Flavorful Moments Start with Somixa</h6>
+                          <h6>Smart Application Technology</h6>
                         </div>
                       </div>
                     </div>
@@ -1419,28 +1418,26 @@ const HomeScreen = () => {
                         <div className="icon">
                           {/* <i
                             className="ti-desktop"
-                            style={{ color: "#39B54A" }}
+                            style={{ color: "#B62025" }}
                           /> */}
                           <span style={{ fontSize: "25px" }}>🌿</span>
                         </div>
                         <div className="info">
-                          <h6>Bold Masala. Everyday Delight.</h6>
+                          <h6>New Strength, Every Tile.</h6>
                         </div>
                       </div>
                     </div>
                   </div>
                   <p>
-                    Experience the future of flavorful refreshment with Somixa’s
-                    signature masala blends. Made with carefully sourced spices
-                    and time-tested recipes, our products bring consistency,
-                    convenience, and taste to every glass. Whether you prefer a
-                    classic tang or a modern twist, Somixa offers the ideal mix
-                    for all palates. Trust in our commitment to purity,
-                    tradition, and customer satisfaction.
+                    With a strong commitment to quality and reliability, OSTRO
+                    is trusted by architects, contractors, retailers, and
+                    homeowners across the country. Our products are engineered
+                    to withstand the test of time, weather, and wear—so your
+                    spaces stay stunning and structurally sound.
                     <a
                       href="/about"
                       style={{
-                        color: "#39B54A",
+                        color: "#B62025",
                         cursor: "pointer",
                         fontSize: "15px",
                         whiteSpace: "nowrap",
@@ -1454,7 +1451,7 @@ const HomeScreen = () => {
                 </div>
 
                 <div className="releted-listing-area wow fadeInUp mb-10">
-                  <h3 className="title mb-40">Related HR Services</h3>
+                  <h3 className="title mb-40">Related Products</h3>
                   <Slider
                     {...reletedListingSlider2}
                     className="releted-listing-slider-one"
@@ -1464,9 +1461,13 @@ const HomeScreen = () => {
                         <div
                           className="listing-thumbnail"
                           style={{
-                            backgroundColor: product.backgroundColor,
+                            backgroundColor: `${product.backgroundColor}`,
                             borderTopLeftRadius: "10px",
                             borderTopRightRadius: "10px",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            display: "flex",
+                            height: "400px",
                           }}
                         >
                           <Link href={`/product-details/${product.slug}`}>
@@ -1474,7 +1475,11 @@ const HomeScreen = () => {
                           </Link>
                           <span
                             className="featured-btn"
-                            style={{ borderRadius: "5px" }}
+                            style={{
+                              borderRadius: "5px",
+                              fontSize: "10px",
+                              padding: "3px 10px",
+                            }}
                           >
                             Featured
                           </span>
@@ -1489,7 +1494,7 @@ const HomeScreen = () => {
                             style={{
                               display: "-webkit-box",
                               WebkitBoxOrient: "vertical",
-                              WebkitLineClamp: 3,
+                              WebkitLineClamp: 5,
                               overflow: "hidden",
                               textOverflow: "ellipsis",
                               maxWidth: "300px",
@@ -1526,11 +1531,9 @@ const HomeScreen = () => {
                                       }
                                     }
                                   }}
-                                  className="flex items-center gap-2 px-3 py-1 mt-1 mb-3 rounded-lg transition"
+                                  className="flex items-center gap-2 px-3 py-1 mt-1 mb-3 border border-gray-300 rounded-lg transition"
                                   style={{
-                                    backgroundColor: "#FFF",
-                                    border: "1px solid #4EB755",
-                                    borderColor: "#4EB755",
+                                    backgroundColor: "#24D07A",
                                     display: "flex",
                                     flexDirection: "row",
                                     alignItems: "center",
@@ -1540,7 +1543,7 @@ const HomeScreen = () => {
                                   }}
                                 >
                                   <img
-                                    src="/assets/images/whatsapp-image-green.png"
+                                    src="/assets/images/WhatsApp_Image.png"
                                     alt="WhatsApp Icon"
                                     style={{
                                       height: "15px",
@@ -1550,7 +1553,7 @@ const HomeScreen = () => {
                                   />
                                   <span
                                     className="underline"
-                                    style={{ color: "#4EB755" }}
+                                    style={{ color: "#FFFFFF" }}
                                   >
                                     Get Price
                                   </span>
@@ -1688,7 +1691,7 @@ const HomeScreen = () => {
                           if (!userInfo) {
                             setIsPopupOpen(true); // Open the popup if session data is not available
                           } else {
-                            const phoneNumber = "919726594265"; // Replace with your retailer's WhatsApp number
+                            const phoneNumber = "919942500600"; // Replace with your retailer's WhatsApp number
                             const message = `${requirementInput}`;
                             const encodedMessage = encodeURIComponent(message);
                             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -1705,7 +1708,7 @@ const HomeScreen = () => {
                     >
                       Or connect with seller instantly
                       <a
-                        href="tel: 9726594265"
+                        href="tel: 9942500600"
                         className="text-decoration-none ms-1"
                       >
                         <strong
@@ -1715,7 +1718,7 @@ const HomeScreen = () => {
                             marginLeft: "5px",
                           }}
                         >
-                          97265 94265
+                          99425 00600
                         </strong>
                       </a>
                     </div>
@@ -1740,11 +1743,18 @@ const HomeScreen = () => {
                   <h4 className="title">Customer Review</h4>
                   <ul className="review-list">
                     <li className="review">
-                      <div className="thumb">
-                        <img
-                          src="/assets/images/listing/review-1.jpg"
-                          alt="review image"
-                        />
+                      <div
+                        className="thumb border"
+                        style={{
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "flex",
+                          borderRadius: "10px",
+                          backgroundColor: "#F7F7F7",
+                          fontSize: "40px",
+                        }}
+                      >
+                        M
                       </div>
                       <div className="review-content">
                         <h5>Moriana Steve</h5>
@@ -1755,25 +1765,29 @@ const HomeScreen = () => {
                           amet nullam sit ut ornare mattis urna.{" "}
                         </p>
                         <div className="content-meta d-flex align-items-center justify-content-between">
-                          <ul className="ratings ratings-three">
+                          <ul className="ratings ratings-six">
                             <li>
-                              <span className="av-rate">4.5</span>
+                              <span className="av-rate">4</span>
                             </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
+                            {[1, 2, 3, 4].map((val, _ind) => (
+                              <li className="px-1" key={_ind}>
+                                <img
+                                  src="/assets/images/contact-info/rating-star-fill.svg"
+                                  alt="star-fill"
+                                  style={{ height: "20px", width: "20px" }}
+                                />
+                              </li>
+                            ))}
+                            <img
+                              src="/assets/images/contact-info/rating-star.svg"
+                              alt="Call"
+                              style={{
+                                height: "20px",
+                                width: "20px",
+                                marginTop: "1px",
+                                marginLeft: "2px",
+                              }}
+                            />
                           </ul>
                           <a href="#" className="reply">
                             <i className="ti-share-alt" />
@@ -1783,11 +1797,18 @@ const HomeScreen = () => {
                       </div>
                     </li>
                     <li className="review">
-                      <div className="thumb">
-                        <img
-                          src="/assets/images/listing/review-2.jpg"
-                          alt="review image"
-                        />
+                      <div
+                        className="thumb border"
+                        style={{
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "flex",
+                          borderRadius: "10px",
+                          backgroundColor: "#F7F7F7",
+                          fontSize: "40px",
+                        }}
+                      >
+                        M
                       </div>
                       <div className="review-content">
                         <h5>Moriana Steve</h5>
@@ -1798,25 +1819,29 @@ const HomeScreen = () => {
                           amet nullam sit ut ornare mattis urna.{" "}
                         </p>
                         <div className="content-meta d-flex align-items-center justify-content-between">
-                          <ul className="ratings ratings-three">
+                          <ul className="ratings ratings-six">
                             <li>
-                              <span className="av-rate">4.5</span>
+                              <span className="av-rate">4</span>
                             </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
+                            {[1, 2, 3, 4].map((val, _ind) => (
+                              <li className="px-1" key={_ind}>
+                                <img
+                                  src="/assets/images/contact-info/rating-star-fill.svg"
+                                  alt="star-fill"
+                                  style={{ height: "20px", width: "20px" }}
+                                />
+                              </li>
+                            ))}
+                            <img
+                              src="/assets/images/contact-info/rating-star.svg"
+                              alt="Call"
+                              style={{
+                                height: "20px",
+                                width: "20px",
+                                marginTop: "1px",
+                                marginLeft: "2px",
+                              }}
+                            />
                           </ul>
                           <a href="#" className="reply">
                             <i className="ti-share-alt" />
@@ -1826,11 +1851,18 @@ const HomeScreen = () => {
                       </div>
                     </li>
                     <li className="review">
-                      <div className="thumb">
-                        <img
-                          src="/assets/images/listing/review-3.jpg"
-                          alt="review image"
-                        />
+                      <div
+                        className="thumb border"
+                        style={{
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "flex",
+                          borderRadius: "10px",
+                          backgroundColor: "#F7F7F7",
+                          fontSize: "40px",
+                        }}
+                      >
+                        M
                       </div>
                       <div className="review-content">
                         <h5>Moriana Steve</h5>
@@ -1841,25 +1873,29 @@ const HomeScreen = () => {
                           amet nullam sit ut ornare mattis urna.{" "}
                         </p>
                         <div className="content-meta d-flex align-items-center justify-content-between">
-                          <ul className="ratings ratings-three">
+                          <ul className="ratings ratings-six">
                             <li>
-                              <span className="av-rate">4.5</span>
+                              <span className="av-rate">4</span>
                             </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
-                            <li className="star">
-                              <i className="flaticon-star-1" />
-                            </li>
+                            {[1, 2, 3, 4].map((val, _ind) => (
+                              <li className="px-1" key={_ind}>
+                                <img
+                                  src="/assets/images/contact-info/rating-star-fill.svg"
+                                  alt="star-fill"
+                                  style={{ height: "20px", width: "20px" }}
+                                />
+                              </li>
+                            ))}
+                            <img
+                              src="/assets/images/contact-info/rating-star.svg"
+                              alt="Call"
+                              style={{
+                                height: "20px",
+                                width: "20px",
+                                marginTop: "1px",
+                                marginLeft: "2px",
+                              }}
+                            />
                           </ul>
                           <a href="#" className="reply">
                             <i className="ti-share-alt" />

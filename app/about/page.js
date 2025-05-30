@@ -3,7 +3,6 @@ import PageBanner from "@/components/PageBanner";
 import TestimoinalSlider from "@/components/Slider/TestimonialSlider";
 import UserInfoPopup from "@/components/userDetailPopup";
 import Layout from "@/layouts/Layout";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const About = () => {
@@ -67,14 +66,14 @@ const About = () => {
   }, []);
 
   const handleCall = () => {
-    window.location.href = "tel:+919726594265"; // Replace with your number
+    window.location.href = "tel:+919942500600"; // Replace with your number
   };
 
   const handleLocation = () => {
-    window.open("https://maps.app.goo.gl/K2WbFgvgbXR13jTj7", "_blank");
+    window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank");
   };
   const handleWhatsApp = () => {
-    const phoneNumber = "919726594265"; // Replace with your number
+    const phoneNumber = "919942500600"; // Replace with your number
     const defaultMessage = `Hi, I'm interested in your products. Could you please provide more details?`;
 
     const encodedMessage = encodeURIComponent(defaultMessage);
@@ -85,7 +84,7 @@ const About = () => {
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:somixafoodsllp@gmail.com"; // Replace with your email
+    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
   };
 
   const handleFacebook = () => {
@@ -236,7 +235,7 @@ const About = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/phone_black.png"
+                        src="/assets/images/black-icons/Call Us.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -266,7 +265,7 @@ const About = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/location_black.png"
+                        src="/assets/images/black-icons/Location.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -307,7 +306,7 @@ const About = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/whatsapp_black.png"
+                        src="/assets/images/black-icons/whatsapp.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -337,7 +336,7 @@ const About = () => {
                       }}
                     >
                       <img
-                        src="/assets/images/black-icons/gmail_black.png"
+                        src="/assets/images/black-icons/email.svg"
                         alt="Call"
                         style={{ height: "20px", width: "20px" }}
                       />
@@ -347,43 +346,41 @@ const About = () => {
                 </div>
 
                 {/* Right Section: Rounded Social Buttons */}
-                <div style={{ display: "flex", gap: "10px" }}>
+                <div
+                  style={{ display: "flex", gap: "10px", marginLeft: "20px" }}
+                >
                   <button
                     className="social-rounded-btn"
                     onClick={handleFacebook}
-                    style={{ padding: "8px", backgroundColor: "#3A559F" }}
                   >
                     <img
-                      src="/assets/images/icons/facebook.png"
+                      src="/assets/images/social-media-icons/Facebook.svg"
                       alt="Facebook"
                     />
                   </button>
                   <button
                     className="social-rounded-btn"
                     onClick={handleInstagram}
-                    style={{ padding: "8px", backgroundColor: "#D03B98" }}
                   >
                     <img
-                      src="/assets/images/icons/instagram.png"
+                      src="/assets/images/social-media-icons/Instagram.svg"
                       alt="Instagram"
                     />
                   </button>
                   <button
                     className="social-rounded-btn"
                     onClick={handleLinkedIn}
-                    style={{ padding: "8px", backgroundColor: "#0B63BD" }}
                   >
                     <img
-                      src="/assets/images/icons/linkedin.png"
+                      src="/assets/images/social-media-icons/Linkedin.svg"
                       alt="LinkedIn"
                     />
                   </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleShare}
-                    style={{ padding: "8px", backgroundColor: "#00ADFF" }}
-                  >
-                    <img src="/assets/images/icons/share.png" alt="Share" />
+                  <button className="social-rounded-btn" onClick={handleShare}>
+                    <img
+                      src="/assets/images/social-media-icons/Share.svg"
+                      alt="Share"
+                    />
                   </button>
                 </div>
               </div>
@@ -396,7 +393,7 @@ const About = () => {
               <div className="col-lg-6">
                 <div className="section-title text-center mb-60 wow fadeInUp">
                   <span className="sub-title">Some Feature</span>
-                  <h2>Spicing Up Your Refreshment</h2>
+                  <h2>Top Reasons To Use Ostro Adhesives</h2>
                 </div>
               </div>
             </div>
@@ -410,12 +407,12 @@ const About = () => {
                     <i className="flaticon-add-user" />
                   </div>
                   <div className="content">
-                    <h3 className="title">User-Friendly Experience</h3>
+                    <h3 className="title">Unmatched Bonding Strength</h3>
                     <p>
-                      At Somixa, our masala is crafted for everyday refreshment
-                      — with authentic flavors, digestive benefits, and
-                      easy-to-use packaging that perfectly complements your
-                      lifestyle and taste preferences.
+                      At Ostro, we prioritize lasting connections. Our tile
+                      adhesive offers superior grip, ensuring tiles stay firmly
+                      in place for years — even in high-moisture and
+                      heavy-traffic areas.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -432,12 +429,12 @@ const About = () => {
                     <i className="flaticon-gift-box" />
                   </div>
                   <div className="content">
-                    <h3 className="title">Exciting Daily Deals</h3>
+                    <h3 className="title">Easy Application, Smooth Finish</h3>
                     <p>
-                      Enjoy unbeatable value every day. Somixa brings you
-                      exclusive deals on our flavorful buttermilk masala—crafted
-                      to add taste, freshness, and digestive goodness to every
-                      glass at a pocket-friendly price.
+                      No more messy installations. Ostro adhesives spread
+                      effortlessly, offering excellent workability for both
+                      professionals and DIYers — leaving behind a flawless
+                      finish every time.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -454,11 +451,11 @@ const About = () => {
                     <i className="flaticon-laptop" />
                   </div>
                   <div className="content">
-                    <h3 className="title">Smart & Quick Choice</h3>
+                    <h3 className="title">Versatile Compatibility</h3>
                     <p>
-                      Say goodbye to bland beverages. With Somixa’s perfectly
-                      balanced masala blend, elevate your buttermilk in seconds
-                      — full of flavor, tradition, and digestive goodness.
+                      Whether you're working with ceramic, vitrified, porcelain,
+                      or natural stone, Ostro's formula bonds seamlessly with
+                      various tile types and surfaces.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -475,12 +472,13 @@ const About = () => {
                     <i className="flaticon-headphone" />
                   </div>
                   <div className="content">
-                    <h3 className="title">24/7 Live Support</h3>
+                    <h3 className="title">
+                      Professional Grade. Trusted by Experts
+                    </h3>
                     <p>
-                      Got a question? Our friendly team is here round the clock
-                      to assist you — whether it’s about ingredients, usage
-                      tips, or placing an order. With Somixa, help is always
-                      just a message away.
+                      Chosen by architects, builders, and contractors across the
+                      country — Ostro is the name professionals trust when only
+                      strength will do.
                     </p>
                     {/* <Link className="btn-link icon-btn" href="/how-work">
                       More Details
@@ -510,11 +508,11 @@ const About = () => {
                 <div className="features-content-box features-content-box-one">
                   <div className="section-title section-title-left mb-30 wow fadeInUp">
                     <span className="sub-title">Our Speciality</span>
-                    <h2>Experience Flavor Like Never Before</h2>
+                    <h2>Experience Tiling Like Never Before</h2>
                   </div>
                   <h5>
-                    Enjoy rich flavor, digestive comfort, and authentic taste
-                    with Somixa Buttermilk Masala.
+                    Enjoy superior grip, lasting durability, and flawless finish
+                    with Ostro Tile Adhesives.
                   </h5>
                   <ul className="features-list-one">
                     <li
@@ -525,25 +523,10 @@ const About = () => {
                         <i className="flaticon-find" />
                       </div>
                       <div className="content">
-                        <h5>Perfect Blend, Instantly</h5>
+                        <h5>Bond with Strength, Built to Last</h5>
                         <p>
-                          From daily meals to festive feasts, add the ideal
-                          touch of spice to your buttermilk with ease.
-                        </p>
-                      </div>
-                    </li>
-                    <li
-                      className="list-item wow fadeInUp"
-                      data-wow-delay="20ms"
-                    >
-                      <div className="icon">
-                        <i className="flaticon-place" />
-                      </div>
-                      <div className="content">
-                        <h5>Smart & Flavorful Choice</h5>
-                        <p>
-                          Our simple, authentic blend makes it easy to enjoy
-                          delicious, refreshing chaas—every time.
+                          Experience unmatched durability and grip with Ostro
+                          Tile Adhesives – engineered for ultimate performance.
                         </p>
                       </div>
                     </li>
@@ -555,11 +538,40 @@ const About = () => {
                         <i className="flaticon-social-care" />
                       </div>
                       <div className="content">
-                        <h5>24/7 Flavor Support</h5>
+                        <h5>Perfect Fit, Every Time</h5>
                         <p>
-                          Need help with recipes, orders, or product info? Our
-                          support team is always here to assist you — anytime,
-                          anywhere.
+                          From kitchens to commercial spaces, find the right
+                          adhesive for every tile, surface, and style.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      className="list-item wow fadeInUp"
+                      data-wow-delay="20ms"
+                    >
+                      <div className="icon">
+                        <i className="flaticon-place" />
+                      </div>
+                      <div className="content">
+                        <h5>Smart & Easy Application</h5>
+                        <p>
+                          User-friendly formulas and guided instructions make
+                          installation quick, clean, and stress-free.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      className="list-item wow fadeInUp"
+                      data-wow-delay="30ms"
+                    >
+                      <div className="icon">
+                        <i className="flaticon-social-care" />
+                      </div>
+                      <div className="content">
+                        <h5>24/7 Expert Support</h5>
+                        <p>
+                          Need advice or technical help? Our specialists are
+                          just a call or click away, anytime.
                         </p>
                       </div>
                     </li>
@@ -572,14 +584,10 @@ const About = () => {
                 <div className="content">
                   <h5>Our Vision</h5>
                   <p>
-                    To be the trusted brand for authentic buttermilk masala
-                    blends that deliver great taste, health benefits, and honor
-                    cultural heritage. We aim to make traditional drinks like
-                    chaas popular for their flavor and digestive qualities,
-                    bringing wellness and enjoyment to homes worldwide. Our
-                    vision is to make every glass of buttermilk a nourishing,
-                    flavorful experience that blends tradition with modern
-                    convenience.
+                    To redefine the foundation of modern living spaces by
+                    delivering strong, reliable, and innovative tile adhesive
+                    solutions—empowering every home and structure with lasting
+                    strength, seamless beauty, and enduring confidence.
                   </p>
                 </div>
               </div>
@@ -587,13 +595,15 @@ const About = () => {
                 <div className="content">
                   <h5>Our Mission</h5>
                   <p>
-                    At Somixa, our mission is to deliver authentic, high-quality
-                    buttermilk masala made from carefully selected spices. We
-                    aim to promote better digestion and hydration through our
-                    flavorful blend, preserving the essence of Indian culinary
-                    heritage. With a focus on purity, convenience, and customer
-                    satisfaction, we strive to become a staple in every kitchen
-                    that values both health and tradition.
+                    At Ostro, our mission is to build strength from the ground
+                    up—by providing high-performance tile adhesives that ensure
+                    lasting durability, precision, and confidence in every bond.
+                    We are committed to setting new benchmarks in quality and
+                    reliability through advanced formulations, sustainable
+                    solutions, and a deep understanding of our customers’ needs.
+                    With "Strength" at our core, we aim to support every
+                    project—from homes to high-rises—with unwavering integrity
+                    and innovation.
                   </p>
                 </div>
               </div>
@@ -607,7 +617,7 @@ const About = () => {
         <div
           className="cta-wrapper-two bg_cover b"
           style={{
-            backgroundImage: "url(assets/images/bg/cta-bg-2.jpg)",
+            backgroundImage: "url(/assets/images/bg/cta-bg-2.jpg)",
             height: "40vh",
             display: "flex",
             alignItems: "center",
@@ -628,7 +638,7 @@ const About = () => {
                   Decora
                 </div>
               </div> */}
-            <div className="col-lg-5">
+            <div className="col-lg-6">
               <div
                 className="cta-content-box wow fadeInRight"
                 style={{
@@ -639,16 +649,17 @@ const About = () => {
                 }}
               >
                 <h2 style={{ textAlign: "center" }}>
-                  Experience the Art of Refreshing Tradition
+                  Experience Unmatched Bonding Strength
                 </h2>
                 <p style={{ textAlign: "center" }}>
-                  Premium buttermilk masala crafted with top-quality ingredients
-                  and authentic flavors that refresh your tradition.
+                  Premium tile adhesive solutions offering superior grip,
+                  long-lasting durability, and seamless finish — built to
+                  transform your surfaces with perfection that lasts.
                 </p>
                 <a
                   onClick={() => {
                     const link = document.createElement("a");
-                    link.href = "/assets/images/Plixon-Catalogue-Digital.pdf";
+                    link.href = "/assets/images/Ostro-Company Profile.pdf";
                     link.download = "Plixon-Catalogue-Digital.pdf"; // Optional: Specify the file name
                     link.click();
                   }}
@@ -656,7 +667,7 @@ const About = () => {
                   style={{
                     display: "inline-block",
                     padding: "10px 20px",
-                    backgroundColor: "#39B54A",
+                    backgroundColor: "#B62025",
                     color: "#FFF",
                     textDecoration: "none",
                     borderRadius: "5px",
@@ -707,7 +718,9 @@ const About = () => {
           <div
             className="newsletter-wrapper newsletter-wrapper-one bg_cover"
             style={{
-              backgroundImage: "url(assets/images/bg/newsletter-bg-1.jpg)",
+              // backgroundImage: "url(assets/images/bg/newsletter-bg-1.jpg)",
+              backgroundColor: "#B62025",
+              opacity: "0.8",
             }}
           >
             <div className="row">
@@ -746,7 +759,10 @@ const About = () => {
                     />
                     <button
                       className="main-btn"
-                      style={{ backgroundColor: "#39B54A" }}
+                      style={{
+                        backgroundColor: "#B62025",
+                        border: "2px solid #4D4E4E",
+                      }}
                       onClick={() => {
                         const userInfo = sessionStorage.getItem("userInfo"); // Retrieve userInfo here
                         if (isMobile) {
@@ -759,7 +775,7 @@ const About = () => {
                               document.getElementById("whatsappMessage").value;
                             const encodedMessage = encodeURIComponent(message);
                             // Replace with your actual WhatsApp number (with country code, remove +)
-                            const whatsappNumber = "919726594265";
+                            const whatsappNumber = "919942500600";
                             window.open(
                               `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
                               "_blank"
