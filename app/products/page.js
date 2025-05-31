@@ -54,7 +54,7 @@ const Products = () => {
   };
 
   const handleLinkedIn = () => {
-    window.open("https://linkedin.com/in/yourprofile", "_blank");
+    window.open("https://linkedin.com/", "_blank");
   };
 
   const handleShare = async () => {

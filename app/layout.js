@@ -2,9 +2,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Somixa - Truth of Goodness",
+  title: "Ostro - Brave New Strength",
   description:
-    "Somixa is a brand that offers a range of products that are designed to help you live a healthier life. We offer a range of products that are designed to help you live a healthier life.",
+    "Ostro offers high-performance tile adhesives designed for lasting strength, easy application, and superior bonding. Trusted by professionals for reliable results across all surfaces.",
   manifest: "/manifest.json", // Path to the PWA manifest file
 };
 

@@ -288,21 +288,15 @@ const HomeScreen = () => {
   };
 
   const handleFacebook = () => {
-    window.open(
-      "https://www.facebook.com/decorafurnitureofficial/?_rdr",
-      "_blank"
-    );
+    window.open("https://www.facebook.com/", "_blank");
   };
 
   const handleInstagram = () => {
-    window.open(
-      "https://www.instagram.com/decorafurniture_official/",
-      "_blank"
-    );
+    window.open("https://www.instagram.com/", "_blank");
   };
 
   const handleLinkedIn = () => {
-    window.open("https://linkedin.com/in/yourprofile", "_blank");
+    window.open("https://linkedin.com/", "_blank");
   };
 
   const handleShare = async () => {
@@ -584,50 +578,30 @@ const HomeScreen = () => {
         </div>
 
         {/* Social Media Buttons - More minimal */}
-        <div style={{ marginTop: "20px" }}>
-          <button
-            className="social-rounded-btn"
-            onClick={handleFacebook}
-            style={{
-              padding: "8px",
-              backgroundColor: "#3A559F",
-              marginRight: "10px",
-            }}
-          >
-            <img src="/assets/images/icons/facebook.png" alt="Facebook" />
+        <div style={{ display: "flex", gap: "15px", paddingTop: "10px" }}>
+          <button className="social-rounded-btn" onClick={handleFacebook}>
+            <img
+              src="/assets/images/social-media-icons/Facebook.svg"
+              alt="Facebook"
+            />
           </button>
-          <button
-            className="social-rounded-btn"
-            onClick={handleInstagram}
-            style={{
-              padding: "8px",
-              backgroundColor: "#D03B98",
-              marginRight: "10px",
-            }}
-          >
-            <img src="/assets/images/icons/instagram.png" alt="Instagram" />
+          <button className="social-rounded-btn" onClick={handleInstagram}>
+            <img
+              src="/assets/images/social-media-icons/Instagram.svg"
+              alt="Instagram"
+            />
           </button>
-          <button
-            className="social-rounded-btn"
-            onClick={handleLinkedIn}
-            style={{
-              padding: "8px",
-              backgroundColor: "#0B63BD",
-              marginRight: "10px",
-            }}
-          >
-            <img src="/assets/images/icons/linkedin.png" alt="LinkedIn" />
+          <button className="social-rounded-btn" onClick={handleLinkedIn}>
+            <img
+              src="/assets/images/social-media-icons/Linkedin.svg"
+              alt="LinkedIn"
+            />
           </button>
-          <button
-            className="social-rounded-btn"
-            onClick={handleShare}
-            style={{
-              padding: "8px",
-              backgroundColor: "#00ADFF",
-              marginRight: "10px",
-            }}
-          >
-            <img src="/assets/images/icons/share.png" alt="Share" />
+          <button className="social-rounded-btn" onClick={handleShare}>
+            <img
+              src="/assets/images/social-media-icons/Share.svg"
+              alt="Share"
+            />
           </button>
         </div>
 
@@ -647,7 +621,7 @@ const HomeScreen = () => {
               window.open("https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9", "_blank")
             }
             style={{
-              padding: "12px 20px",
+              padding: "8px 95px",
               border: "1px solid #e0e0e0",
               borderRadius: "8px",
               backgroundColor: "white",
@@ -1906,7 +1880,28 @@ const HomeScreen = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="listing-review-form mb-30 wow fadeInUp">
+                <div
+                  style={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                    display: "flex",
+                    marginBottom: "50px",
+                  }}
+                >
+                  <button
+                    className="main-btn"
+                    onClick={() =>
+                      // window.open("https://g.page/r/CTjtIU0PHHR6EBM/review", "_blank")
+                      window.open(
+                        "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
+                        "_blank"
+                      )
+                    }
+                  >
+                    Give Us a Review
+                  </button>
+                </div>
+                {/* <div className="listing-review-form mb-30 wow fadeInUp">
                   <div className="row">
                     <div className="col-md-6">
                       <h4 className="title">Write a Review</h4>
@@ -1994,7 +1989,7 @@ const HomeScreen = () => {
                       </div>
                     </div>
                   </form>
-                </div>
+                </div> */}
               </div>
             </div>
 
