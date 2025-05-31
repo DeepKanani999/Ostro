@@ -173,7 +173,7 @@ const ListingDetailsRight = () => {
                   const userInfo = sessionStorage.getItem("userInfo"); // Retrieve userInfo here
                   if (isMobile) {
                     const phoneNumber = "919942500600"; // Replace with your WhatsApp number (in international format without '+')
-                    const message = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Somixa Buttermilk Masala products and would appreciate a consultation on how your blends can add flavor and health benefits to our daily offerings.`;
+                    const message = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Ostro tile adhesive products and would appreciate a consultation on how your solutions can enhance the durability, performance, and ease of application in our tiling projects.`;
                     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                       message
                     )}`;
@@ -185,7 +185,7 @@ const ListingDetailsRight = () => {
                       setIsPopupOpen(true); // Open the popup if session data is not available
                     } else {
                       const phoneNumber = "919942500600"; // Replace with your WhatsApp number (in international format without '+')
-                      const message = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Buttermilk Masala products and would appreciate a consultation on how your blends can add flavor and health benefits to our daily offerings.`;
+                      const message = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Ostro tile adhesive products and would appreciate a consultation on how your solutions can enhance the durability, performance, and ease of application in our tiling projects.`;
                       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
                         message
                       )}`;
@@ -283,7 +283,7 @@ const ListingDetailsRight = () => {
                     const userInfo = sessionStorage.getItem("userInfo"); // Retrieve userInfo here
                     if (isMobile) {
                       const whatsappNumber = "919942500600"; // WhatsApp number in international format (without '+')
-                      const enquiryMessage = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Somixa Buttermilk Masala products and would appreciate a consultation on how your blends can add flavor and health benefits to our daily offerings.`;
+                      const enquiryMessage = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Ostro tile adhesive products and would appreciate a consultation on how your solutions can enhance the durability, performance, and ease of application in our tiling projects.`;
 
                       const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                         enquiryMessage
@@ -300,7 +300,7 @@ const ListingDetailsRight = () => {
                         setIsPopupOpen(true); // Open the popup if session data is not available
                       } else {
                         const whatsappNumber = "919942500600"; // WhatsApp number in international format (without '+')
-                        const enquiryMessage = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Buttermilk Masala products and would appreciate a consultation on how your blends can add flavor and health benefits to our daily offerings.`;
+                        const enquiryMessage = `Hello, I'm ${name} and my contact number is ${number}. I'm interested in learning more about your Ostro tile adhesive products and would appreciate a consultation on how your solutions can enhance the durability, performance, and ease of application in our tiling projects.`;
 
                         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
                           enquiryMessage
@@ -375,7 +375,7 @@ const ListingDetailsRight = () => {
                     window.open(
                       "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
                       "_blank"
-                    )
+                    );
                   }}
                 >
                   <div className="flex items-center bg-transparent rounded-lg hover:bg-gray-100 transition">
