@@ -203,6 +203,42 @@ const HomeScreen = () => {
   const [visible, setVisible] = useState(true);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+
+  useEffect(() => {
+    const handler = (e) => {
+      // Intercept the event and store it
+      e.preventDefault();
+      setDeferredPrompt(e);
+      console.log("✅ beforeinstallprompt event captured");
+    };
+
+    window.addEventListener("beforeinstallprompt", handler);
+
+    return () => window.removeEventListener("beforeinstallprompt", handler);
+  }, []);
+
+  const handleAddToHomeScreen = async () => {
+    if (!deferredPrompt) {
+      console.log("⚠️ Install prompt not available");
+      return;
+    }
+
+    // Show the prompt
+    deferredPrompt.prompt();
+
+    const result = await deferredPrompt.userChoice;
+    console.log("👉 User response:", result.outcome);
+
+    if (result.outcome === "accepted") {
+      console.log("✅ User accepted the install prompt");
+    } else {
+      console.log("❌ User dismissed the install prompt");
+    }
+
+    // Clear the saved prompt since it can't be used again
+    setDeferredPrompt(null);
+  };
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -1250,7 +1286,7 @@ const HomeScreen = () => {
 
                 {/* Share */}
                 <button
-                  onClick={handleShare}
+                  onClick={handleAddToHomeScreen}
                   style={{
                     display: "flex",
                     flexDirection: "row",
