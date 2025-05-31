@@ -89,20 +89,20 @@ const About = () => {
 
   const handleFacebook = () => {
     window.open(
-      "https://www.facebook.com/decorafurnitureofficial/?_rdr",
+      "https://www.facebook.com/",
       "_blank"
     );
   };
 
   const handleInstagram = () => {
     window.open(
-      "https://www.instagram.com/decorafurniture_official/",
+      "https://www.instagram.com/",
       "_blank"
     );
   };
 
   const handleLinkedIn = () => {
-    window.open("https://linkedin.com/in/yourprofile", "_blank");
+    window.open("https://linkedin.com/", "_blank");
   };
 
   const handleShare = async () => {
@@ -130,21 +130,6 @@ const About = () => {
 
   const handleClosePopup = () => {
     setIsPopupOpen(false); // Close the popup
-  };
-
-  const handleButtonClick = () => {
-    if (!mounted) return;
-
-    const userInfo = sessionStorage.getItem("userInfo");
-    if (isMobile) {
-      handleWhatsApp(); // Directly open WhatsApp on mobile
-    } else {
-      if (!userInfo) {
-        setIsPopupOpen(true);
-      } else {
-        handleWhatsApp();
-      }
-    }
   };
 
   return (

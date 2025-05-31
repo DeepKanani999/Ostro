@@ -80,20 +80,20 @@ const Contact = () => {
 
   const handleFacebook = () => {
     window.open(
-      "https://www.facebook.com/decorafurnitureofficial/?_rdr",
+      "https://www.facebook.com/",
       "_blank"
     );
   };
 
   const handleInstagram = () => {
     window.open(
-      "https://www.instagram.com/decorafurniture_official/",
+      "https://www.instagram.com/",
       "_blank"
     );
   };
 
   const handleLinkedIn = () => {
-    window.open("https://linkedin.com/in/yourprofile", "_blank");
+    window.open("https://linkedin.com/", "_blank");
   };
 
   const handleShare = async () => {
@@ -380,43 +380,35 @@ const Contact = () => {
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
-              <div
-                  style={{ display: "flex", gap: "10px", marginLeft: "20px" }}
+              <div style={{ display: "flex", gap: "10px", marginLeft: "20px" }}>
+                <button className="social-rounded-btn" onClick={handleFacebook}>
+                  <img
+                    src="/assets/images/social-media-icons/Facebook.svg"
+                    alt="Facebook"
+                  />
+                </button>
+                <button
+                  className="social-rounded-btn"
+                  onClick={handleInstagram}
                 >
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleFacebook}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Facebook.svg"
-                      alt="Facebook"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleInstagram}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Instagram.svg"
-                      alt="Instagram"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleLinkedIn}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Linkedin.svg"
-                      alt="LinkedIn"
-                    />
-                  </button>
-                  <button className="social-rounded-btn" onClick={handleShare}>
-                    <img
-                      src="/assets/images/social-media-icons/Share.svg"
-                      alt="Share"
-                    />
-                  </button>
-                </div>
+                  <img
+                    src="/assets/images/social-media-icons/Instagram.svg"
+                    alt="Instagram"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleLinkedIn}>
+                  <img
+                    src="/assets/images/social-media-icons/Linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleShare}>
+                  <img
+                    src="/assets/images/social-media-icons/Share.svg"
+                    alt="Share"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>

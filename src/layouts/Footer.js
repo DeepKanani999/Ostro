@@ -6,20 +6,20 @@ const Footer = () => {
   const [writtenMessage, setWrittenMessage] = useState("");
   const handleFacebook = () => {
     window.open(
-      "https://www.facebook.com/decorafurnitureofficial/?_rdr",
+      "https://www.facebook.com/",
       "_blank"
     );
   };
 
   const handleInstagram = () => {
     window.open(
-      "https://www.instagram.com/decorafurniture_official/",
+      "https://www.instagram.com/",
       "_blank"
     );
   };
 
   const handleLinkedIn = () => {
-    window.open("https://linkedin.com/in/yourprofile", "_blank");
+    window.open("https://linkedin.com/", "_blank");
   };
 
   const handleShare = async () => {
@@ -226,9 +226,6 @@ const Footer = () => {
                     <li>
                       <a href="/contact">Contact Us</a>
                     </li>
-                    <li>
-                      <a href="/privacy-policy">Privacy Policy</a>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -303,10 +300,10 @@ const Footer = () => {
                 <div className="copyright-link">
                   <ul>
                     <li>
-                      <Link href="#">Terms & Conditions</Link>
+                      <Link href="/Terms-Condition">Terms & Conditions</Link>
                     </li>
                     <li>
-                      <Link href="#">Privacy Policy</Link>
+                      <Link href="/Privacy-Policy">Privacy Policy</Link>
                     </li>
                   </ul>
                 </div>
