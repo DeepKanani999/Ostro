@@ -152,7 +152,7 @@ const faqs = [
   {
     question: "Can Ostro adhesive be used on existing tiles?",
     answer:
-      "Somixa Masala is available online and in select retail stores. You can also order directly through our website or partner marketplaces for home delivery.",
+      "Yes, with the right surface preparation and a suitable Ostro product, you can tile over existing tiles securely.",
   },
 ];
 
