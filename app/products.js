@@ -20,12 +20,17 @@ export const products = [
 
       "Tiles Adhesive Gold – Type 1T is a reliable and efficient solution for professional internal tile installations, ensuring strong adhesion, reduced tile slippage, and long-lasting durability for residential and commercial spaces.",
     ],
-    usability: ["Daily Refreshment", "Digestive Aid", "Cooling Drink"],
-    specification: [
-      "Mild Spice Blend",
-      "Natural Ingredients",
-      "No Artificial Additives",
+    usability: [
+      "Wall and Floor Tiling",
+      "Indoor and Outdoor Use",
+      "Professional and DIY Projects",
     ],
+    specification: [
+      "High Bond Strength",
+      "Waterproof and Heat Resistant",
+      "Ready-to-Use Formula",
+    ],
+
     backgroundColor: "#F3E1B3",
   },
   {
@@ -43,11 +48,15 @@ export const products = [
 
       "It is supplied in 20 kg or 25 kg moisture-resistant bags with a shelf life of 12 months when stored properly. Tile Adhesive Silver – Type 2T is the ideal solution for high-quality, reliable, and long-lasting ceramic tile installations.",
     ],
-    usability: ["Summer Drink", "Cooling Refreshment", "Post-Meal Aid"],
+    usability: [
+      "Wall Tile Installation",
+      "Floor Tile Application",
+      "Bathroom & Wet Area Fixing",
+    ],
     specification: [
-      "Mint-Infused Blend",
-      "Cooling Effect",
-      "Natural & Healthy",
+      "Strong Bonding Formula",
+      "Water-Resistant Adhesive",
+      "Quick Setting & Durable",
     ],
     backgroundColor: "#D9D9D9",
   },
@@ -69,11 +78,15 @@ export const products = [
       "It comes in moisture-resistant bags of 20 kg and 30 kg and has a shelf life of 12 months when stored properly. Platenium 3T is the perfect solution for professionals seeking reliable, long-lasting tile installations across diverse environments.",
     ],
     usability: [
-      "Digestive Health",
-      "Flavorful Drink",
-      "Invigorating Refreshment",
+      "High-Strength Bonding",
+      "Moisture-Resistant Application",
+      "Quick-Setting Installation",
     ],
-    specification: ["Ginger-Infused", "Zesty Flavor", "Natural Ingredients"],
+    specification: [
+      "Polymer-Enhanced Formula",
+      "Superior Adhesion",
+      "Premium Quality Materials",
+    ],
     backgroundColor: "#DFE5A9",
   },
 ];

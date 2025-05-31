@@ -679,7 +679,7 @@ const Products = () => {
                           style={{
                             display: "-webkit-box",
                             WebkitBoxOrient: "vertical",
-                            WebkitLineClamp: 3,
+                            WebkitLineClamp: 5,
                             overflow: "hidden",
                             textOverflow: "ellipsis",
                             maxWidth: "300px",
