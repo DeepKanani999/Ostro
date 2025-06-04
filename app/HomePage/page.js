@@ -597,8 +597,8 @@ const HomeScreen = () => {
           <button
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/assets/images/Plixon-Catalogue-Digital.pdf";
-              link.download = "Plixon-Catalogue-Digital.pdf";
+              link.href = "/assets/images/Ostro-Company-Profile.pdf";
+              link.download = "Ostro-Company-Catalogue.pdf";
               link.click();
             }}
             style={buttonStyle}
@@ -1360,7 +1360,12 @@ const HomeScreen = () => {
                             className="ti-desktop"
                             style={{ color: "#B62025" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <img
+                            src="/assets/images/home-about-us/new_bonding.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>New Bonding Formula</h6>
@@ -1374,7 +1379,12 @@ const HomeScreen = () => {
                             className="ti-volume"
                             style={{ color: "#B62025" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <img
+                            src="/assets/images/home-about-us/crystal_finish.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>Crystal Finish Compatibility</h6>
@@ -1388,7 +1398,12 @@ const HomeScreen = () => {
                             className="ti-desktop"
                             style={{ color: "#B62025" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <img
+                            src="/assets/images/home-about-us/strong.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>Strong on Every Surface</h6>
@@ -1402,7 +1417,12 @@ const HomeScreen = () => {
                             className="ti-desktop"
                             style={{ color: "#B62025" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <img
+                            src="/assets/images/home-about-us/dual_compatibility.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>Dual Compatibility – Floor & Wall</h6>
@@ -1416,7 +1436,12 @@ const HomeScreen = () => {
                             className="ti-volume"
                             style={{ color: "#B62025" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <img
+                            src="/assets/images/home-about-us/smart_application.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>Smart Application Technology</h6>
@@ -1430,7 +1455,12 @@ const HomeScreen = () => {
                             className="ti-desktop"
                             style={{ color: "#B62025" }}
                           /> */}
-                          <span style={{ fontSize: "25px" }}>🌿</span>
+                          <img
+                            src="/assets/images/home-about-us/new_strength.svg"
+                            className="me-2 mx-2"
+                            alt="WhatsApp"
+                            style={{ width: "20px", height: "20px" }}
+                          />
                         </div>
                         <div className="info">
                           <h6>New Strength, Every Tile.</h6>
@@ -1799,10 +1829,10 @@ const HomeScreen = () => {
                               }}
                             />
                           </ul>
-                          <a href="#" className="reply">
+                          {/* <a href="#" className="reply">
                             <i className="ti-share-alt" />
                             Reply
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </li>
@@ -1853,10 +1883,10 @@ const HomeScreen = () => {
                               }}
                             />
                           </ul>
-                          <a href="#" className="reply">
+                          {/* <a href="#" className="reply">
                             <i className="ti-share-alt" />
                             Reply
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </li>
@@ -1907,10 +1937,10 @@ const HomeScreen = () => {
                               }}
                             />
                           </ul>
-                          <a href="#" className="reply">
+                          {/* <a href="#" className="reply">
                             <i className="ti-share-alt" />
                             Reply
-                          </a>
+                          </a> */}
                         </div>
                       </div>
                     </li>

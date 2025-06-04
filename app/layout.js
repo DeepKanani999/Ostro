@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:image" content="/assets/images/og-image.jpg" />
-        <meta property="og:url" content="https://www.plixon.com" />
+        <meta property="og:url" content="https://ostrocemex.com/" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />

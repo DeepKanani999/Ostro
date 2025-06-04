@@ -35,25 +35,25 @@ export default class TestimoinalSlider extends Component {
         >
           <div className="single-thumb">
             <img
-              src="/assets/images/testimonial/tm-thumb-1.jpg"
+              src="/assets/images/testimonial/feedback-user-1.jpg"
               alt="testimonial thumb"
             />
           </div>
           <div className="single-thumb">
             <img
-              src="/assets/images/testimonial/tm-thumb-2.jpg"
+              src="/assets/images/testimonial/feedback-user-2.jpg"
               alt="testimonial thumb"
             />
           </div>
           <div className="single-thumb">
             <img
-              src="/assets/images/testimonial/tm-thumb-3.jpg"
+              src="/assets/images/testimonial/feedback-user-3.jpg"
               alt="testimonial thumb"
             />
           </div>
           <div className="single-thumb">
             <img
-              src="/assets/images/testimonial/tm-thumb-2.jpg"
+              src="/assets/images/testimonial/feedback-user-4.jpg"
               alt="testimonial thumb"
             />
           </div>

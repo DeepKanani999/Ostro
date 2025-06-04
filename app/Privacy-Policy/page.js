@@ -81,7 +81,7 @@ const PrivacyPolicy = () => {
   };
 
   const handleMail = () => {
-    window.location.href = "mailto:info@plixon.in"; // Replace with your email
+    window.location.href = "mailto:ostrocemex@gmail.com"; // Replace with your email
   };
 
   const handleFacebook = () => {

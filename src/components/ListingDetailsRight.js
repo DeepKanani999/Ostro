@@ -113,7 +113,7 @@ const ListingDetailsRight = () => {
             <a
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "/assets/images/Ostro-Company Profile.pdf";
+                link.href = "/assets/images/Ostro-Company-Profile.pdf";
                 link.target = "_blank"; // Open in a new tab
                 link.rel = "noopener noreferrer"; // Security best practice
                 document.body.appendChild(link);

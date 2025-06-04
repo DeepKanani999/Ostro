@@ -93,17 +93,11 @@ const ProductDetailsClient = ({ item }) => {
   };
 
   const handleFacebook = () => {
-    window.open(
-      "https://www.facebook.com/",
-      "_blank"
-    );
+    window.open("https://www.facebook.com/", "_blank");
   };
 
   const handleInstagram = () => {
-    window.open(
-      "https://www.instagram.com/",
-      "_blank"
-    );
+    window.open("https://www.instagram.com/", "_blank");
   };
 
   const handleLinkedIn = () => {
@@ -416,43 +410,35 @@ const ProductDetailsClient = ({ item }) => {
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
-              <div
-                  style={{ display: "flex", gap: "10px", marginLeft: "20px" }}
+              <div style={{ display: "flex", gap: "10px", marginLeft: "20px" }}>
+                <button className="social-rounded-btn" onClick={handleFacebook}>
+                  <img
+                    src="/assets/images/social-media-icons/Facebook.svg"
+                    alt="Facebook"
+                  />
+                </button>
+                <button
+                  className="social-rounded-btn"
+                  onClick={handleInstagram}
                 >
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleFacebook}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Facebook.svg"
-                      alt="Facebook"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleInstagram}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Instagram.svg"
-                      alt="Instagram"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleLinkedIn}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Linkedin.svg"
-                      alt="LinkedIn"
-                    />
-                  </button>
-                  <button className="social-rounded-btn" onClick={handleShare}>
-                    <img
-                      src="/assets/images/social-media-icons/Share.svg"
-                      alt="Share"
-                    />
-                  </button>
-                </div>
+                  <img
+                    src="/assets/images/social-media-icons/Instagram.svg"
+                    alt="Instagram"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleLinkedIn}>
+                  <img
+                    src="/assets/images/social-media-icons/Linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleShare}>
+                  <img
+                    src="/assets/images/social-media-icons/Share.svg"
+                    alt="Share"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -669,7 +655,7 @@ const ProductDetailsClient = ({ item }) => {
                           <li className="review">
                             <div className="review-thumb">
                               <img
-                                src="/assets/images/products/review-thumb-1.jpg"
+                                src="/assets/images/testimonial/feedback-user-1.jpg"
                                 alt="review thumb"
                               />
                             </div>
@@ -700,15 +686,15 @@ const ProductDetailsClient = ({ item }) => {
                                 ab illo inventore veritatis et quasi architecto
                                 beatae vitae dicta sunt explicabo.
                               </p>
-                              <a href="#" className="reply">
+                              {/* <a href="#" className="reply">
                                 Reply
-                              </a>
+                              </a> */}
                             </div>
                           </li>
                           <li className="review">
                             <div className="review-thumb">
                               <img
-                                src="/assets/images/products/review-thumb-2.jpg"
+                                src="/assets/images/testimonial/feedback-user-2.jpg"
                                 alt="review thumb"
                               />
                             </div>
@@ -739,14 +725,35 @@ const ProductDetailsClient = ({ item }) => {
                                 ab illo inventore veritatis et quasi architecto
                                 beatae vitae dicta sunt explicabo.
                               </p>
-                              <a href="#" className="reply">
+                              {/* <a href="#" className="reply">
                                 Reply
-                              </a>
+                              </a> */}
                             </div>
                           </li>
                         </ul>
                       </div>
-                      <div className="products-review-form">
+                      <div
+                        style={{
+                          justifyContent: "center",
+                          alignItems: "center",
+                          display: "flex",
+                          marginBottom: "50px",
+                        }}
+                      >
+                        <button
+                          className="main-btn"
+                          onClick={() =>
+                            // window.open("https://g.page/r/CTjtIU0PHHR6EBM/review", "_blank")
+                            window.open(
+                              "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
+                              "_blank"
+                            )
+                          }
+                        >
+                          Give Us a Review
+                        </button>
+                      </div>
+                      {/* <div className="products-review-form">
                         <h4 className="title">Leave Your Reviews</h4>
                         <form onSubmit={(e) => e.preventDefault()}>
                           <div className="row">
@@ -812,7 +819,7 @@ const ProductDetailsClient = ({ item }) => {
                             </div>
                           </div>
                         </form>
-                      </div>
+                      </div> */}
                     </div>
                   )}
                 </div>

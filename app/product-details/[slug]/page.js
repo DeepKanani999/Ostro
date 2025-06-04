@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
       title: item?.name || 'Product Details',
       description: item?.detail || 'Product details page',
       images: [item?.image || ''],
-      url: `https://plixon.in/product/${slug}`,
+      url: `https://ostrocemex.com/product/${slug}`,
       type: 'website',
     },
   };

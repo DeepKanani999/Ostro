@@ -88,17 +88,11 @@ const About = () => {
   };
 
   const handleFacebook = () => {
-    window.open(
-      "https://www.facebook.com/",
-      "_blank"
-    );
+    window.open("https://www.facebook.com/", "_blank");
   };
 
   const handleInstagram = () => {
-    window.open(
-      "https://www.instagram.com/",
-      "_blank"
-    );
+    window.open("https://www.instagram.com/", "_blank");
   };
 
   const handleLinkedIn = () => {
@@ -389,7 +383,13 @@ const About = () => {
                   data-wow-delay="10ms"
                 >
                   <div className="icon">
-                    <i className="flaticon-add-user" />
+                    {/* <i className="flaticon-add-user" /> */}
+                    <img
+                      src="/assets/images/about-us/unmatched_bonding.svg"
+                      className="me-2 mx-2"
+                      alt="icons"
+                      style={{ width: "50px", height: "50px" }}
+                    />
                   </div>
                   <div className="content">
                     <h3 className="title">Unmatched Bonding Strength</h3>
@@ -411,7 +411,13 @@ const About = () => {
                   data-wow-delay="20ms"
                 >
                   <div className="icon">
-                    <i className="flaticon-gift-box" />
+                    {/* <i className="flaticon-gift-box" /> */}
+                    <img
+                      src="/assets/images/about-us/easy_application.svg"
+                      className="me-2 mx-2"
+                      alt="icons"
+                      style={{ width: "50px", height: "50px" }}
+                    />
                   </div>
                   <div className="content">
                     <h3 className="title">Easy Application, Smooth Finish</h3>
@@ -433,7 +439,13 @@ const About = () => {
                   data-wow-delay="30ms"
                 >
                   <div className="icon">
-                    <i className="flaticon-laptop" />
+                    {/* <i className="flaticon-laptop" /> */}
+                    <img
+                      src="/assets/images/about-us/versatile.svg"
+                      className="me-2 mx-2"
+                      alt="icons"
+                      style={{ width: "50px", height: "50px" }}
+                    />
                   </div>
                   <div className="content">
                     <h3 className="title">Versatile Compatibility</h3>
@@ -454,7 +466,13 @@ const About = () => {
                   data-wow-delay="40ms"
                 >
                   <div className="icon">
-                    <i className="flaticon-headphone" />
+                    {/* <i className="flaticon-headphone" /> */}
+                    <img
+                      src="/assets/images/about-us/professional_grade.svg"
+                      className="me-2 mx-2"
+                      alt="icons"
+                      style={{ width: "50px", height: "50px" }}
+                    />
                   </div>
                   <div className="content">
                     <h3 className="title">
@@ -505,7 +523,13 @@ const About = () => {
                       data-wow-delay="10ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-find" />
+                        {/* <i className="flaticon-find" /> */}
+                        <img
+                          src="/assets/images/about-us/bond_with_strength.svg"
+                          className="me-2 mx-2"
+                          alt="icons"
+                          style={{ width: "40px", height: "40px" }}
+                        />
                       </div>
                       <div className="content">
                         <h5>Bond with Strength, Built to Last</h5>
@@ -520,7 +544,13 @@ const About = () => {
                       data-wow-delay="30ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-social-care" />
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/perfect_fit_every_time.svg"
+                          className="me-2 mx-2"
+                          alt="icons"
+                          style={{ width: "40px", height: "40px" }}
+                        />
                       </div>
                       <div className="content">
                         <h5>Perfect Fit, Every Time</h5>
@@ -535,7 +565,13 @@ const About = () => {
                       data-wow-delay="20ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-place" />
+                        {/* <i className="flaticon-place" /> */}
+                        <img
+                          src="/assets/images/about-us/smart_and_easy.svg"
+                          className="me-2 mx-2"
+                          alt="icons"
+                          style={{ width: "40px", height: "40px" }}
+                        />
                       </div>
                       <div className="content">
                         <h5>Smart & Easy Application</h5>
@@ -550,7 +586,13 @@ const About = () => {
                       data-wow-delay="30ms"
                     >
                       <div className="icon">
-                        <i className="flaticon-social-care" />
+                        {/* <i className="flaticon-social-care" /> */}
+                        <img
+                          src="/assets/images/about-us/24-7_support.svg"
+                          className="me-2 mx-2"
+                          alt="icons"
+                          style={{ width: "40px", height: "40px" }}
+                        />
                       </div>
                       <div className="content">
                         <h5>24/7 Expert Support</h5>
@@ -644,8 +686,8 @@ const About = () => {
                 <a
                   onClick={() => {
                     const link = document.createElement("a");
-                    link.href = "/assets/images/Ostro-Company Profile.pdf";
-                    link.download = "Plixon-Catalogue-Digital.pdf"; // Optional: Specify the file name
+                    link.href = "/assets/images/Ostro-Company-Profile.pdf";
+                    link.download = "Ostro-Company-Catalogue.pdf"; // Optional: Specify the file name
                     link.click();
                   }}
                   className="main-btn"
@@ -704,8 +746,7 @@ const About = () => {
             className="newsletter-wrapper newsletter-wrapper-one bg_cover"
             style={{
               // backgroundImage: "url(assets/images/bg/newsletter-bg-1.jpg)",
-              backgroundColor: "#B62025",
-              opacity: "0.8",
+              backgroundColor: "#979797",
             }}
           >
             <div className="row">
@@ -746,7 +787,6 @@ const About = () => {
                       className="main-btn"
                       style={{
                         backgroundColor: "#B62025",
-                        border: "2px solid #4D4E4E",
                       }}
                       onClick={() => {
                         const userInfo = sessionStorage.getItem("userInfo"); // Retrieve userInfo here
