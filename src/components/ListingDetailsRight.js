@@ -8,6 +8,27 @@ const ListingDetailsRight = () => {
 
   const [isMobile, setIsMobile] = useState(false);
 
+  const featuresArr = [
+    "CERAMIC",
+    "GLAZED TILES",
+    "USED TILES",
+    "VECTRIFIED TILES",
+    "FLOORS",
+    "INTERNAL WALLS",
+    "EXTERNAL WALLS",
+    "GLASS MOSAIC",
+    "NETRUAL STONE",
+    "GRANITE",
+    "MARBAL",
+    "WET SURFACE",
+    "AAC BLOCKS",
+    "CONCRETE BLOCKS",
+    "SIPOREX",
+    "HOLLOW BLOCKS",
+    "BRICKS MORTAR",
+    "CEMENT MORTAR",
+  ];
+
   const isMobileDevice = () => {
     // Check user agent
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -129,6 +150,7 @@ const ListingDetailsRight = () => {
                 textDecoration: "none",
                 borderRadius: "5px",
                 marginTop: "10px",
+                cursor: "pointer",
               }}
             >
               View Catalogue
@@ -431,72 +453,15 @@ const ListingDetailsRight = () => {
           <h5 className="widget-title" style={{ marginBottom: "10px" }}>
             Get the List of Features we provide
           </h5>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            TileGrip Pro
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            Adhezo
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            Fixora
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            TileLock
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            GripStone
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            StrongHold
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            TileFixx
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            StickTuff
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            Adhero
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            MegaBond
-          </span>
-          <span
-            style={{ borderRadius: "20px" }}
-            className="px-4 py-2 my-1 mr-3 rounded-full border border-gray-300 bg-white text-sm shadow-sm"
-          >
-            GripXpert
-          </span>
+          {featuresArr?.map((val, ind) => (
+            <span
+              key={ind}
+              style={{ borderRadius: "20px" }}
+              className="px-3 py-2 my-1 mr-1 rounded-full border border-gray-300 bg-white text-xs shadow-sm"
+            >
+              {val}
+            </span>
+          ))}
         </div>
       </div>
     </div>

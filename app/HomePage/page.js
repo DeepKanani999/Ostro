@@ -13,11 +13,13 @@ import styles from "../../styles/style.css";
 import { products } from "@/products";
 import BottomTab from "@/components/BottomBar";
 import UserInfoPopup from "@/components/userDetailPopup";
+import ContactModal from "@/components/contactModel";
 
 const heroImages = [
   "/assets/images/Hero-Banner/ostro_hero_banner-1.jpg",
   "/assets/images/Hero-Banner/ostro_hero_banner-2.jpg",
   "/assets/images/Hero-Banner/ostro_hero_banner-3.jpg",
+  "/assets/images/Hero-Banner/ostro_hero_banner-4.jpg",
 ];
 
 const populerSearches = [
@@ -204,6 +206,7 @@ const HomeScreen = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [showContactModal, setShowContactModal] = useState(false);
 
   useEffect(() => {
     const handler = (e) => {
@@ -469,7 +472,29 @@ const HomeScreen = () => {
 
   return (
     <Layout>
-      {video && <VideoPopup close={setVideo} />}
+      {/* {video && <VideoPopup close={setVideo} />} */}
+
+      {isMobile && showContactModal && (
+        <div
+          style={{
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: 9999,
+            background: "rgba(255, 255, 255, 0.8)",
+            backdropFilter: "blur(10px)",
+            boxShadow: "0 4px 15px rgba(0, 0, 0, 0.2)",
+            borderRadius: "10px",
+            // padding: "20px",
+            width: "90%",
+            maxWidth: "400px",
+            textAlign: "center",
+          }}
+        >
+          <ContactModal onClose={() => setShowContactModal(false)} />
+        </div>
+      )}
 
       {mounted && isPopupOpen && !sessionStorage.getItem("userInfo") && (
         <div
@@ -510,7 +535,7 @@ const HomeScreen = () => {
       {/*====== End Hero Banner Carousel ======*/}
 
       {/*====== Contact Info Buttons Starts here ======*/}
-      <div
+      {/* <div
         className="d-md-none"
         style={{
           marginBottom: "-30px",
@@ -522,126 +547,6 @@ const HomeScreen = () => {
           backgroundColor: "transparent",
         }}
       >
-        <div
-          style={{
-            padding: "10px 0",
-            backgroundColor: "transparent",
-            overflow: "hidden",
-            width: "100vw",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-        >
-          {/* CALL */}
-          <button onClick={handleCall} style={buttonStyle}>
-            <div style={iconWrapperStyle}>
-              <img
-                src="/assets/images/black-icons/Call Us.svg"
-                alt="Call"
-                style={{ height: "20px", width: "20px" }}
-              />
-            </div>
-            <span style={labelStyle}>CALL US</span>
-          </button>
-
-          {/* WHATSAPP */}
-          <button
-            onClick={() => {
-              const userInfo = sessionStorage.getItem("userInfo");
-              if (isMobile) {
-                handleWhatsApp();
-              } else {
-                !userInfo ? setIsPopupOpen(true) : handleWhatsApp();
-              }
-            }}
-            style={buttonStyle}
-          >
-            <div style={iconWrapperStyle}>
-              <img
-                src="/assets/images/black-icons/whatsapp.svg"
-                alt="WhatsApp"
-                style={{ height: "20px", width: "20px" }}
-              />
-            </div>
-            <span style={labelStyle}>WHATSAPP</span>
-          </button>
-
-          {/* LOCATION */}
-          <button onClick={handleLocation} style={buttonStyle}>
-            <div style={iconWrapperStyle}>
-              <img
-                src="/assets/images/black-icons/Location.svg"
-                alt="Location"
-                style={{ height: "20px", width: "20px" }}
-              />
-            </div>
-            <span style={labelStyle}>LOCATION</span>
-          </button>
-
-          {/* MAIL */}
-          <button onClick={handleMail} style={buttonStyle}>
-            <div style={iconWrapperStyle}>
-              <img
-                src="/assets/images/black-icons/email.svg"
-                alt="Mail"
-                style={{ height: "20px", width: "20px" }}
-              />
-            </div>
-            <span style={labelStyle}>MAIL US</span>
-          </button>
-
-          {/* DOWNLOAD BROCHURE */}
-          <button
-            onClick={() => {
-              const link = document.createElement("a");
-              link.href = "/assets/images/Ostro-Company-Profile.pdf";
-              link.download = "Ostro-Company-Catalogue.pdf";
-              link.click();
-            }}
-            style={buttonStyle}
-          >
-            <div style={iconWrapperStyle}>
-              <i
-                className="ti-download"
-                style={{ color: "#000", fontSize: "18px" }}
-              />
-            </div>
-            <span style={labelStyle}>DOWNLOAD BROCHURE</span>
-          </button>
-        </div>
-
-        {/* Social Media Buttons - More minimal */}
-        <div style={{ display: "flex", gap: "15px", paddingTop: "10px" }}>
-          <button className="social-rounded-btn" onClick={handleFacebook}>
-            <img
-              src="/assets/images/social-media-icons/Facebook.svg"
-              alt="Facebook"
-            />
-          </button>
-          <button className="social-rounded-btn" onClick={handleInstagram}>
-            <img
-              src="/assets/images/social-media-icons/Instagram.svg"
-              alt="Instagram"
-            />
-          </button>
-          <button className="social-rounded-btn" onClick={handleLinkedIn}>
-            <img
-              src="/assets/images/social-media-icons/Linkedin.svg"
-              alt="LinkedIn"
-            />
-          </button>
-          <button className="social-rounded-btn" onClick={handleShare}>
-            <img
-              src="/assets/images/social-media-icons/Share.svg"
-              alt="Share"
-            />
-          </button>
-        </div>
-
-        {/* Google Review Button - Simplified */}
         <div
           className="col-12"
           style={{
@@ -681,7 +586,7 @@ const HomeScreen = () => {
             Rate Us
           </button>
         </div>
-      </div>
+      </div> */}
       {/*====== Contact Info Buttons Ends here ======*/}
 
       {/*====== Start Listing Details Section ======*/}
@@ -855,6 +760,48 @@ const HomeScreen = () => {
                   </div>
                   Mail Us
                 </button>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <button
+                    onClick={() =>
+                      // window.open(
+                      //   "https://g.page/r/CTjtIU0PHHR6EBM/review",
+                      //   "_blank"
+                      // )
+                      window.open(
+                        "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
+                        "_blank"
+                      )
+                    }
+                    style={{
+                      padding: "9px 15px",
+                      border: "1px solid #e0e0e0",
+                      borderRadius: "8px",
+                      backgroundColor: "white",
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "16px",
+                      fontWeight: "500",
+                      color: "#333",
+                      boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
+                    }}
+                  >
+                    <img
+                      src="/assets/images/icons/google.png"
+                      alt="Google Reviews"
+                      style={{
+                        height: "30px",
+                        width: "30px",
+                        marginRight: "12px",
+                      }}
+                    />
+                    Rate Us
+                  </button>
+                </div>
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
@@ -905,7 +852,7 @@ const HomeScreen = () => {
             {/* Buttons Section */}
             <div className="row">
               {/* Desktop View */}
-              <div
+              {/* <div
                 className="d-none d-md-flex row"
                 style={{
                   marginBottom: "20px",
@@ -1086,61 +1033,19 @@ const HomeScreen = () => {
                     />
                   </button>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    marginLeft: "20px",
-                  }}
-                >
-                  <button
-                    onClick={() =>
-                      // window.open(
-                      //   "https://g.page/r/CTjtIU0PHHR6EBM/review",
-                      //   "_blank"
-                      // )
-                      window.open(
-                        "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
-                        "_blank"
-                      )
-                    }
-                    style={{
-                      padding: "9px 40px",
-                      border: "1px solid #e0e0e0",
-                      borderRadius: "8px",
-                      backgroundColor: "white",
-                      display: "flex",
-                      alignItems: "center",
-                      fontSize: "16px",
-                      fontWeight: "500",
-                      color: "#333",
-                      boxShadow: "0 2px 4px rgba(0,0,0,0.05)",
-                    }}
-                  >
-                    <img
-                      src="/assets/images/icons/google.png"
-                      alt="Google Reviews"
-                      style={{
-                        height: "30px",
-                        width: "30px",
-                        marginRight: "12px",
-                      }}
-                    />
-                    Rate Us
-                  </button>
-                </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Mobile Bottom Tab - Hidden on Desktop */}
             <div
-              className="d-md-none bg-white fixed-bottom shadow-lg"
+              className="d-md-none fixed-bottom shadow-lg"
               style={{
-                padding: "10px 0", // Adjusted padding to avoid extra space
-                paddingTop: "0px",
-                borderTop: "1px solid #eee",
+                // padding: "0px 0", // Adjusted padding to avoid extra space
+                // paddingTop: "0px",
+                // borderTop: "1px solid #eee",
                 zIndex: 1000,
                 overflow: "hidden", // Prevents content overflow
+                backdropFilter: "blur(10px)",
               }}
             >
               <BottomTab visible={visible} closeTab={closeTab} />
@@ -1150,45 +1055,34 @@ const HomeScreen = () => {
                   gap: "5px", // Ensures proper spacing between buttons
                   width: "100%",
                   padding: "0 10px", // Full width for buttons
+                  alignItems: "center",
+                  justifyContent: "space-evenly",
+                  marginBottom: "10px",
+                  marginTop: "10px",
                 }}
               >
                 {/* Call */}
                 <button
                   onClick={handleCall}
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
+                    height: "50px",
+                    width: "50px",
+                    backgroundColor: "#E5E4E2",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#4D4E4E",
-                    borderRadius: "10px",
-                    padding: "4px",
-                    width: "100%", // Full width for buttons
-                    cursor: "pointer",
+                    display: "flex",
+                    marginRight: 10,
+                    borderRadius: "50%",
                   }}
                 >
-                  <div
+                  <img
+                    src="/assets/images/black-icons/Call Us.svg"
+                    alt="Call"
                     style={{
-                      height: "27px",
-                      width: "27px",
-                      backgroundColor: "#FFF",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      display: "flex",
-                      marginRight: 10,
-                      borderRadius: "50%",
+                      height: "25px",
+                      width: "25px",
                     }}
-                  >
-                    <img
-                      src="/assets/images/black-icons/Call Us.svg"
-                      alt="Call"
-                      style={{
-                        height: "17px",
-                        width: "17px",
-                      }}
-                    />
-                  </div>
-                  <span style={{ fontSize: "12px", color: "#FFF" }}>Call</span>
+                  />
                 </button>
 
                 {/* WhatsApp */}
@@ -1206,114 +1100,106 @@ const HomeScreen = () => {
                     }
                   }}
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
+                    height: "50px",
+                    width: "50px",
+                    backgroundColor: "#E5E4E2",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#4D4E4E",
-                    borderRadius: "10px",
-                    padding: "4px",
-                    width: "100%", // Full width for buttons
-                    cursor: "pointer",
+                    display: "flex",
+                    marginRight: 7,
+                    borderRadius: "50%",
                   }}
                 >
-                  <div
+                  <img
+                    src="/assets/images/black-icons/whatsapp.svg"
+                    alt="WhatsApp"
                     style={{
-                      height: "27px",
-                      width: "27px",
-                      backgroundColor: "#FFF",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      display: "flex",
-                      marginRight: 7,
-                      borderRadius: "50%",
+                      height: "22px",
+                      width: "22px",
                     }}
-                  >
-                    <img
-                      src="/assets/images/black-icons/whatsapp.svg"
-                      alt="WhatsApp"
-                      style={{
-                        height: "15px",
-                        width: "15px",
-                      }}
-                    />
-                  </div>
-                  <span style={{ fontSize: "12px", color: "#FFF" }}>
-                    WhatsApp
-                  </span>
+                  />
                 </button>
 
                 {/* Location */}
                 <button
                   onClick={handleLocation}
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
+                    height: "50px",
+                    width: "50px",
+                    backgroundColor: "#E5E4E2",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#4D4E4E",
-                    borderRadius: "10px",
-                    padding: "4px",
-                    width: "100%", // Full width for buttons
-                    cursor: "pointer",
+                    display: "flex",
+                    marginRight: 10,
+                    borderRadius: "50%",
                   }}
                 >
-                  <div
+                  <img
+                    src="/assets/images/black-icons/Location.svg"
+                    alt="Location"
                     style={{
-                      height: "27px",
-                      width: "27px",
-                      backgroundColor: "#FFF",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      display: "flex",
-                      marginRight: 10,
-                      borderRadius: "50%",
+                      height: "25px",
+                      width: "25px",
                     }}
-                  >
-                    <img
-                      src="/assets/images/black-icons/Location.svg"
-                      alt="Location"
-                      style={{
-                        height: "18px",
-                        width: "18px",
-                      }}
-                    />
-                  </div>
-                  <span style={{ fontSize: "12px", color: "#FFF" }}>
-                    Location
-                  </span>
+                  />
                 </button>
 
-                {/* Share */}
+                {/* Rate Us */}
                 <button
-                  onClick={handleAddToHomeScreen}
+                  onClick={() =>
+                    // window.open(
+                    //   "https://g.page/r/CTjtIU0PHHR6EBM/review",
+                    //   "_blank"
+                    // )
+                    window.open(
+                      "https://maps.app.goo.gl/EZFSQGfVzj9pBQ5e9",
+                      "_blank"
+                    )
+                  }
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
+                    height: "50px",
+                    width: "50px",
+                    backgroundColor: "#E5E4E2",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "#4D4E4E",
-                    borderRadius: "10px",
-                    padding: "4px",
-                    width: "100%", // Full width for buttons
-                    cursor: "pointer",
+                    display: "flex",
+                    marginRight: 10,
+                    borderRadius: "50%",
                   }}
                 >
-                  <div
+                  <img
+                    src="/assets/images/icons/google.png"
+                    alt="Location"
                     style={{
-                      height: "27px",
-                      width: "27px",
-                      backgroundColor: "#FFF",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      display: "flex",
-                      marginRight: 10,
-                      borderRadius: "50%",
+                      height: "30px",
+                      width: "30px",
                     }}
-                  >
-                    <i className="ti-bookmark" style={{ color: "#000" }}></i>
-                  </div>
-                  <span style={{ fontSize: "12px", color: "#FFF" }}>Save</span>
+                  />
+                </button>
+
+                {/* More Options */}
+                <button
+                  onClick={() => setShowContactModal(!showContactModal)}
+                  style={{
+                    height: "50px",
+                    width: "50px",
+                    backgroundColor: "#E5E4E2",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    display: "flex",
+                    marginRight: 10,
+                    borderRadius: "50%",
+                  }}
+                >
+                  <img
+                    src="/assets/images/black-icons/Hamburger_Menu.svg"
+                    alt="Location"
+                    style={{
+                      height: "30px",
+                      width: "30px",
+                      color: "#000",
+                    }}
+                  />
                 </button>
               </div>
             </div>
@@ -1510,8 +1396,22 @@ const HomeScreen = () => {
                             height: "400px",
                           }}
                         >
-                          <Link href={`/product-details/${product.slug}`}>
-                            <img src={product.image} alt="TV Product Image" />
+                          <Link
+                            href={`/product-details/${product.slug}`}
+                            style={{
+                              alignItems: "center",
+                              justifyContent: "center",
+                              display: "flex",
+                            }}
+                          >
+                            <img
+                              src={product.image}
+                              alt="TV Product Image"
+                              style={{
+                                height: "60%",
+                                width: "60%",
+                              }}
+                            />
                           </Link>
                           <span
                             className="featured-btn"
@@ -1534,7 +1434,7 @@ const HomeScreen = () => {
                             style={{
                               display: "-webkit-box",
                               WebkitBoxOrient: "vertical",
-                              WebkitLineClamp: 5,
+                              WebkitLineClamp: 4,
                               overflow: "hidden",
                               textOverflow: "ellipsis",
                               maxWidth: "300px",

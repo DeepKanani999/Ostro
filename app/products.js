@@ -1,92 +1,304 @@
 export const products = [
   {
     id: "som-001",
-    name: "Tiles Adhesive Gold",
+    name: "T1-Tiles Adhesive Gold",
     slug: "Tiles-Adhesive-Gold",
     tag: "Tiles-Adhesive-Gold",
     detail:
-      "Tiles Adhesive Gold – Type 1T is a high-performance, polymer-modified cement-based tile adhesive specially formulated for internal wall and floor tiling applications. Engineered to meet the specifications of IS 15477:2019 Type 1T, this adhesive is ideal for fixing ceramic, glazed ceramic, and unglazed tiles on interior surfaces",
-    image: "/assets/images/products/tiles-adhesive-gold.jpeg",
-    discription: [
-      "Tiles Adhesive Gold – Type 1T is a premium-grade, polymer-modified cementitious tile adhesive, formulated to comply with IS 15477:2019 – Type 1T (T1) standards. It is specifically designed for internal wall and floor applications, providing excellent adhesion for ceramic, glazed ceramic, and unglazed tiles in dry and intermittently wet areas such as kitchens and bathrooms.",
-
-      "This adhesive offers enhanced bond strength, slip resistance, and extended open time, making it ideal for vertical installations where tile slippage must be minimized. The inclusion of high-quality polymers improves flexibility, water retention, and overall durability, helping the adhesive accommodate minor thermal and structural movements without cracking or debonding.",
-
-      "Tiles Adhesive Gold – Type 1T is easy to mix and apply. It has a pot life of 90–120 minutes and an open time of at least 20 minutes, allowing for precise tile placement and adjustment. When applied with a notched trowel, it offers smooth workability and strong initial grab. Coverage ranges between 3–4 kg/m², depending on the substrate and trowel size.",
-
-      "It can be applied on cementitious substrates like plaster, mortar beds, and concrete. Surfaces should be clean, dry (or slightly damp), level, and free from contaminants. Once mixed in a 3:1 powder-to-water ratio, the adhesive creates a uniform paste ready for immediate application.",
-
-      "Available in 20 kg and 40 kg moisture-resistant bags, the product has a 12-month shelf life when stored in a cool, dry environment.",
-
-      "Tiles Adhesive Gold – Type 1T is a reliable and efficient solution for professional internal tile installations, ensuring strong adhesion, reduced tile slippage, and long-lasting durability for residential and commercial spaces.",
-    ],
+      "Ostro Tiles Adhesive complies to requirements of IS 15477 : 2019 - Type 1’T’ “Specification for Adhesives for use with Ceramic Tiles and Mosaics.",
+    image: "/assets/images/products/gold.png",
+    description: {
+      description: [
+        "Add only water. Slip - Resistant for vertical application. Shrinkage cracks get Minimized / eliminated due to its self - curing properties.",
+      ],
+      specifications: {
+        applications: [
+          "Cementitious screed and plasters in internal areas",
+          "Ceramic Wall & Porcelain Tiles: 200x200, 300x300, 300x600, 600x600 mm",
+        ],
+        technical: [
+          { label: "Pack Size", value: "20 kg" },
+          { label: "Color", value: "Grey" },
+          { label: "Material Type", value: "Premixed (just add water)" },
+          { label: "Features", value: "Slip-resistant, self-curing" },
+        ],
+        coverage: {
+          standard: "5-6.5 kg/sq.mtr (3mm bed thickness with notch trowel)",
+          variables: [
+            "Trowel notch size and type",
+            "Tile size and type",
+            "Substrate smoothness and evenness",
+          ],
+        },
+        shelfLife: "12 months from manufacturing when properly stored",
+      },
+    },
     usability: [
-      "Wall and Floor Tiling",
-      "Indoor and Outdoor Use",
-      "Professional and DIY Projects",
+      "Internal Tiles Adhesive",
+      "Ceramic",
+      "Glazed Tiles",
+      "Used Tiles",
     ],
-    specification: [
-      "High Bond Strength",
-      "Waterproof and Heat Resistant",
-      "Ready-to-Use Formula",
+    benefits: [
+      "Easy to Apply",
+      "High bonding strength",
+      "Very low shrinkage prevents debonding and gives",
+      "longer life to tiles",
     ],
-
-    backgroundColor: "#F3E1B3",
+    backgroundColor: "#E5E4E2", // Gold color
   },
   {
     id: "som-002",
-    name: "Tiles Adhesive Silver",
+    name: "T2-Tiles Adhesive Silver",
     slug: "Tiles-Adhesive-Silver",
     tag: "Tiles-Adhesive-Silver",
     detail:
-      "Tile Adhesive Silver – Type 2T is a high-performance, polymer-modified, cementitious tile adhesive formulated in accordance with IS 15477:2019 for Type 2T specifications. It is designed specifically for fixing ceramic tiles (2x2 and 2x4 sizes) on both interior and exterior floor and wall surfaces, offering excellent bond strength, durability, and resistance to slippage and environmental conditions.",
-    image: "/assets/images/products/tiles-adhesive-silver.jpeg",
-    discription: [
-      "Tile Adhesive Silver – Type 2T is a high-performance, polymer-modified cementitious adhesive formulated in accordance with IS 15477:2019 standards for Type 2T classification. Designed specifically for fixing 2x2 and 2x4 ceramic tiles, it is ideal for both internal and external applications on floors and walls. This adhesive offers excellent adhesion to cement-based substrates like plaster, concrete, screeds, and mortar beds. Its polymer modification enhances flexibility, water resistance, and durability, making it suitable for areas exposed to moisture and temperature variations.",
-
-      "The product is a grey, free-flowing powder that, when mixed with water (25–30% by weight), forms a smooth, workable paste. It has high bond strength with tensile adhesion values exceeding 1.0 N/mm², superior slip resistance (≤ 0.5 mm), and an extended open time of over 30 minutes. Its non-slip and extended adjustability features make it easy to work with, especially in vertical tile installations. The adhesive is also shrinkage and crack resistant, ensuring long-term performance even under moderate thermal or structural movements.",
-
-      "It is supplied in 20 kg or 25 kg moisture-resistant bags with a shelf life of 12 months when stored properly. Tile Adhesive Silver – Type 2T is the ideal solution for high-quality, reliable, and long-lasting ceramic tile installations.",
-    ],
+      "Adhesive is a polymer modified, thin - set tile adhesive for fixing ceramic, semi - vitreous tile, vitrified tiles & natural stones of regular size. It is suitable for both vertical and horizontal surfaces, over the cementitious substrate for indoor application, in dry as well as wet areas.",
+    image: "/assets/images/products/silver.png",
+    description: {
+      description: [
+        "Cementitious screed and plasters in internal areas. Add only water. Slip - Resistant for vertical application. Shrinkage cracks get Minimized / eliminated due to its self - curing properties.",
+      ],
+      specifications: {
+        applications: [
+          "Cementitious screed and plasters in internal areas",
+          "Ceramic Wall & Porcelain Tiles: 200x200, 300x300, 300x600, 600x600 mm",
+        ],
+        technical: [
+          { label: "Pack Size", value: "20 kg" },
+          { label: "Color", value: "Grey" },
+          { label: "Material Type", value: "Premixed (just add water)" },
+          { label: "Features", value: "Slip-resistant, self-curing" },
+        ],
+        coverage: {
+          standard: "5-6.5 kg/sq.mtr (3mm bed thickness with notch trowel)",
+          variables: [
+            "Trowel notch size and type",
+            "Tile size and type",
+            "Substrate smoothness and evenness",
+          ],
+        },
+        shelfLife:
+          "12 Month form the month & year of manufacturing when sealed packed & stored in proper (dry place) condition.",
+      },
+    },
     usability: [
-      "Wall Tile Installation",
-      "Floor Tile Application",
-      "Bathroom & Wet Area Fixing",
+      "2X2 / 2X4 Vectrified Tiles",
+      "Ceramic",
+      "FLOOR & WALLS IN",
+      "Renovation projects",
+      "Internal & External Application",
     ],
-    specification: [
-      "Strong Bonding Formula",
-      "Water-Resistant Adhesive",
-      "Quick Setting & Durable",
+    benefits: [
+      "Easy to Apply",
+      "Highly Polymer Modified",
+      "Sag Resistant Formula",
+      "Water & Shock Resistant",
+      "Sustains Heat Aging",
     ],
-    backgroundColor: "#D9D9D9",
+    backgroundColor: "#E5E4E2", // Silver color
   },
   {
     id: "som-003",
-    name: "Tiles Adhesive Platenium",
-    slug: "Tiles-Adhesive-Platenium",
-    tag: "Tiles-Adhesive-Platenium",
+    name: "T3-Tiles Adhesive Platinum",
+    slug: "Tiles-Adhesive-Platinum",
+    tag: "Tiles-Adhesive-Platinum",
     detail:
-      "Platenium 3T is a high-performance, polymer-modified tile adhesive designed for the most demanding tile fixing applications. Engineered to meet the requirements of IS 15477:2019, Type 3T, this adhesive is specially formulated for fixing vitrified tiles, large-format tiles, and glass mosaics on a wide range of substrates. Ideal for both internal and external applications, Platenium 3T offers superior bond strength, slip resistance, and flexibility, making it the preferred choice for modern tiling projects, including tiles-on-tiles applications.",
-    image: "/assets/images/products/tiles-adhesive-platenium.jpeg",
-    discription: [
-      "Platenium 3T is a premium, polymer-modified tile adhesive formulated to meet the highest standards of tile installation, fully compliant with IS 15477:2019 – Type 3T. Specially engineered for demanding applications, it is ideal for fixing vitrified tiles, large-format ceramic tiles, glass mosaics, and for tiles-on-tiles installation.",
-
-      "Platenium 3T offers excellent adhesion, high bond strength, and extended open time, making it suitable for both internal and external walls and floors, including wet areas such as bathrooms, balconies, and swimming pool surroundings. The high polymer content enhances flexibility, thermal resistance, and resistance to cracking due to substrate movement or temperature fluctuations.",
-
-      "This adhesive is designed to work effectively on a wide variety of surfaces, including cementitious substrates, existing tile surfaces, and drywall panels (with appropriate preparation). It provides exceptional slip resistance, ensuring large and heavy tiles stay in place during installation. The smooth and workable consistency allows for easy application with a notched trowel, while its adjustability time and pot life offer convenience for installers over larger areas.",
-
-      "It comes in moisture-resistant bags of 20 kg and 30 kg and has a shelf life of 12 months when stored properly. Platenium 3T is the perfect solution for professionals seeking reliable, long-lasting tile installations across diverse environments.",
-    ],
+      "highly polymer modified, thin - set tile adhesive for fixing for fixing for all type of tiles, mosaics and natural stones, on a variety of surfaces, for both vertical and horizontal application, in dry as well as wet areas for indoor as well as outdoor application.It can be used to fix regular size tile in commercial area as it accommodates shocks due to heavy traffic. NSA - 75 Adhesive complies to Type 3 ‘T’ as per “IS 15477:2019 adhesives for use with ceramic, mosaic and Stone tiles - Specification.",
+    image: "/assets/images/products/platenium.png",
+    description: {
+      description: [
+        "All types of ceramic tile, terracotta, pavers, brick, vitrified tiles, glass mosaic tiles, large format tiles, precast terrazzo, marble & natural stones, low thickness slabs. Cement-based screeds/ bed, gypsum & cement based plasters/ renders, concrete surfaces & bricks, existing tiles & stones, other cement-based surface, waterproofing products, drywall like cement /bison/ gypsum boards ",
+      ],
+      specifications: {
+        applications: [
+          "Cementitious screed and plasters in internal areas",
+          "Ceramic Wall & Porcelain Tiles: 200x200, 300x300, 300x600, 600x600 mm",
+        ],
+        technical: [
+          { label: "Pack Size", value: "20 kg" },
+          { label: "Color", value: "Grey" },
+          { label: "Material Type", value: "Premixed (just add water)" },
+          { label: "Features", value: "Slip-resistant, self-curing" },
+        ],
+        coverage: {
+          standard: "5-6.5 kg/sq.mtr (3mm bed thickness with notch trowel)",
+          variables: [
+            "Trowel notch size and type",
+            "Tile size and type",
+            "Substrate smoothness and evenness",
+          ],
+        },
+        shelfLife:
+          "12 Month form the month & year of manufacturing when sealed packed & stored in proper (dry place) condition.",
+      },
+    },
     usability: [
-      "High-Strength Bonding",
-      "Moisture-Resistant Application",
-      "Quick-Setting Installation",
+      "Vitrified Tiles Large Size",
+      "Glass Mosaic",
+      "Floor and Wall",
+      "Tiles on Tiles Internal and External Applications",
     ],
-    specification: [
-      "Polymer-Enhanced Formula",
-      "Superior Adhesion",
-      "Premium Quality Materials",
+    benefits: [
+      "Highly Polymer Modified",
+      "Sag Resistant Formula",
+      "Flexible Adhesive",
+      "Long Open Time",
+      "Water & Shock Resistant",
+      "Sustains Heat Aging",
+      "Low Voc",
     ],
-    backgroundColor: "#DFE5A9",
+    backgroundColor: "#E5E4E2", // Platinum color
+  },
+  {
+    id: "som-004",
+    name: "T4-Tiles Adhesive Diamond",
+    slug: "Tiles-Adhesive-Diamond",
+    tag: "Tiles-Adhesive-Diamond",
+    detail:
+      "high polymer modified & highly flexible adhesive with enhanced properties of slip resistant, extended open time & excellent bond strength which is necessary for fixing large format tiles/ natural stones & slim tiles on vertical & horizontal surface for indoor as well as outdoor application especially in external conditions & on substrates subject to deformations/ vibrations..",
+    image: "/assets/images/products/dimond.png",
+    description: {
+      description: [
+        "All types of ceramic tile, terracotta, pavers, brick, vitrified tiles, glass mosaic tiles, large format tiles, precast terrazzo, marble & natural stones, low thickness slabs",
+      ],
+      specifications: {
+        applications: [
+          "Cementitious screed and plasters in internal areas",
+          "Ceramic Wall & Porcelain Tiles: 200x200, 300x300, 300x600, 600x600 mm",
+        ],
+        technical: [
+          // { label: "Pack Size", value: "20 kg" },
+          // { label: "Color", value: "Grey" },
+          // { label: "Material Type", value: "Premixed (just add water)" },
+          // { label: "Features", value: "Slip-resistant, self-curing" },
+        ],
+        coverage: {
+          standard: "5-6.5 kg/sq.mtr (3mm bed thickness with notch trowel)",
+          variables: [
+            "Trowel notch size and type",
+            "Tile size and type",
+            "Substrate smoothness and evenness",
+          ],
+        },
+        shelfLife:
+          "12 Month form the month & year of manufacturing when sealed packed & stored in proper (dry place) condition.",
+      },
+    },
+    usability: [
+      "Netural Stone",
+      "Granite",
+      "Marbal",
+      "Ceramic",
+      "Vitrified Tiles",
+      "Glass Mosaic Wet Surfaces Internal & External Applications",
+    ],
+    benefits: [
+      "Highly Polymer Modified",
+      "Sag Resistant Formula",
+      "Flexible Adhesive",
+      "Long Open Time",
+      "Water & Shock Resistant",
+      "Sustains Heat Aging",
+      "Low Voc",
+    ],
+    backgroundColor: "#E5E4E2", // Diamond blue color
+  },
+  {
+    id: "som-005",
+    name: "T5-Tiles Adhesive Diamond Plus",
+    slug: "Tiles-Adhesive-Diamond-Plus",
+    tag: "Tiles-Adhesive-Diamond-Plus",
+    detail:
+      "Adhesive is a high polymer modified & highly flexible adhesive with enhanced properties of slip resistant, extended open time & excellent bond strength which is necessary for fixing large format tiles/ natural stones & slim tiles on vertical & horizontal surface for indoor as well as outdoor application especially in external conditions & on substrates subject to deformations/ vibrations.",
+    image: "/assets/images/products/dimond_plus.png",
+    description: {
+      description: [
+        "All types of ceramic tile, terracotta, pavers, brick, vitrified tiles, glass mosaic tiles, large format tiles, precast terrazzo, marble & natural stones, low thickness slabs.",
+      ],
+      specifications: {
+        applications: [
+          "Cementitious screed and plasters in internal areas",
+          "Ceramic Wall & Porcelain Tiles: 200x200, 300x300, 300x600, 600x600 mm",
+        ],
+        technical: [
+          // { label: "Pack Size", value: "20 kg" },
+          // { label: "Color", value: "Grey" },
+          // { label: "Material Type", value: "Premixed (just add water)" },
+          // { label: "Features", value: "Slip-resistant, self-curing" },
+        ],
+        coverage: {
+          standard: "5-6.5 kg/sq.mtr (3mm bed thickness with notch trowel)",
+          variables: [
+            "Trowel notch size and type",
+            "Tile size and type",
+            "Substrate smoothness and evenness",
+          ],
+        },
+        shelfLife:
+          "12 Month form the month & year of manufacturing when sealed packed & stored in proper (dry place) condition.",
+      },
+    },
+    usability: [
+      "Vitrified Tiles Large Size",
+      "Glass Mosaic",
+      "Floor and Wall",
+      "Tiles on Tiles Applications",
+    ],
+    benefits: [
+      "Highly Polymer Modified",
+      "Sag Resistant Formula",
+      "Flexible Adhesive",
+      "Long Open Time",
+      "Water & Shock Resistant",
+      "Sustains Heat Aging",
+      "Low Voc",
+    ],
+    backgroundColor: "#E5E4E2", // Diamond Plus blue color
+  },
+  {
+    id: "som-006",
+    name: "T6-Block Fix Adhesive",
+    slug: "Tiles-Adhesive-Block-Fixo",
+    tag: "Tiles-Adhesive-Block-Fixo",
+    detail:
+      "Block-fix is a dry powder based ready mix thin layer jointing mortar use for laying AAC block,fly ash ricks,cement blocks and red clay bricks etc.",
+    image: "/assets/images/products/block_fixo.png",
+    description: {
+      description: [
+        "All types of ceramic tile, terracotta, pavers, brick, vitrified tiles, glass mosaic tiles, large format tiles, precast terrazzo, marble & natural stones, low thickness slabs",
+      ],
+      specifications: {
+        applications: [
+          "Cementitious screed and plasters in internal areas",
+          "Ceramic Wall & Porcelain Tiles: 200x200, 300x300, 300x600, 600x600 mm",
+        ],
+        technical: [
+          { label: "Pack Size", value: "40 kg" },
+          { label: "Color", value: "Grey" },
+          // { label: "Material Type", value: "Premixed (just add water)" },
+          // { label: "Features", value: "Slip-resistant, self-curing" },
+        ],
+        coverage: {
+          standard: "5-6.5 kg/sq.mtr (3mm bed thickness with notch trowel)",
+          variables: [
+            "Trowel notch size and type",
+            "Tile size and type",
+            "Substrate smoothness and evenness",
+          ],
+        },
+        shelfLife:
+          "12 Month form the month & year of manufacturing when sealed packed & stored in proper (dry place) condition.",
+      },
+    },
+    usability: [
+      "AAC Blocks",
+      "Concrete Blocks",
+      "Siporex",
+      "Hollow Blocks",
+      "Bricks & Cement Mortar",
+    ],
+    benefits: ["Easy to apply", "High bonding strength"],
+    backgroundColor: "#E5E4E2", // Block gray color
   },
 ];

@@ -162,8 +162,8 @@ const ProductDetailsClient = ({ item }) => {
   *Usability:*
   ${item?.usability?.map((use) => `• ${use}`).join("\n")}
   
-  *Specifications:*
-  ${item?.specification?.map((spec) => `• ${spec}`).join("\n")}
+  *Benefits:*
+  ${item?.benefits?.map((spec) => `• ${spec}`).join("\n")}
   
   Please provide information about:
   • Current price
@@ -195,8 +195,8 @@ const ProductDetailsClient = ({ item }) => {
   *Usability:*
   ${item?.usability?.map((use) => `• ${use}`).join("\n")}
   
-  *Specifications:*
-  ${item?.specification?.map((spec) => `• ${spec}`).join("\n")}
+  *Benefits:*
+  ${item?.benefits?.map((spec) => `• ${spec}`).join("\n")}
   
   Please provide information about:
   • Current price
@@ -448,7 +448,32 @@ const ProductDetailsClient = ({ item }) => {
             style={{ width: "100%" }}
           >
             <div
-              className={`${isMobile ? "flex flex-col" : ""}`}
+              style={{
+                width: isMobile ? "100%" : "40%",
+                height: isMobile ? "400px" : "600px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                backgroundColor: item?.backgroundColor || "#fff",
+                borderRadius: "10px",
+                // padding: "20px",
+              }}
+            >
+              <img
+                src={item?.image}
+                alt={item?.name || "Product Image"}
+                style={{
+                  width: "70%",
+                  height: "70%",
+                  objectFit: "contain",
+                  borderRadius: "10px",
+                }}
+              />
+            </div>
+            <div
+              className={`flex ${
+                isMobile ? "flex-col" : "flex-row"
+              } w-full gap-5`}
               style={{
                 display: "flex",
                 flexDirection: isMobile ? "column" : "row",
@@ -456,28 +481,6 @@ const ProductDetailsClient = ({ item }) => {
                 gap: "20px",
               }}
             >
-              <div
-                style={{
-                  // width: isMobile ? "100%" : "100%",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: item?.backgroundColor || "#fff",
-                  borderRadius: "10px",
-                  // padding: "20px",
-                }}
-              >
-                <img
-                  src={item?.image}
-                  alt={item?.name || "Product Image"}
-                  style={{
-                    width: "350px",
-                    height: "auto",
-                    objectFit: "contain",
-                    borderRadius: "10px",
-                  }}
-                />
-              </div>
               <div
                 style={{
                   width: isMobile ? "100%" : "50%",
@@ -580,7 +583,7 @@ const ProductDetailsClient = ({ item }) => {
                           fontSize: isMobile ? "14px" : "16px",
                         }}
                       >
-                        Specifications:
+                        Benefits:
                       </span>
                       <div
                         style={{
@@ -589,7 +592,7 @@ const ProductDetailsClient = ({ item }) => {
                           gap: "8px",
                         }}
                       >
-                        {item?.specification?.map((val) => (
+                        {item?.benefits?.map((val) => (
                           <span
                             key={val}
                             style={{
@@ -608,6 +611,7 @@ const ProductDetailsClient = ({ item }) => {
               </div>
             </div>
           </div>
+
           <div className="description-wrapper mb-45">
             <div className="row">
               <div className="col-lg-12">
@@ -640,11 +644,133 @@ const ProductDetailsClient = ({ item }) => {
                 <div className="tab-content mt-30">
                   {activeTab === "description" && (
                     <div className="description-content-box">
-                      {item.discription.map((paragraph, index) => (
-                        <p key={index} style={{ marginBottom: "20px" }}>
-                          {paragraph}
-                        </p>
-                      ))}
+                      <div className="mb-4">
+                        <h4
+                          className="mb-3"
+                          style={{ fontSize: "18px", fontWeight: "bold" }}
+                        >
+                          Description
+                        </h4>
+                        {item.description?.description?.map(
+                          (paragraph, index) => (
+                            <p
+                              key={index}
+                              style={{
+                                marginBottom: "15px",
+                                lineHeight: "1.6",
+                              }}
+                            >
+                              {paragraph}
+                            </p>
+                          )
+                        )}
+                      </div>
+
+                      <div className="mb-4">
+                        <h4
+                          className="mb-3"
+                          style={{ fontSize: "18px", fontWeight: "bold" }}
+                        >
+                          Applications
+                        </h4>
+                        <ul style={{ listStyle: "disc", paddingLeft: "20px" }}>
+                          {item.description?.specifications?.applications?.map(
+                            (app, index) => (
+                              <li
+                                key={index}
+                                style={{
+                                  marginBottom: "10px",
+                                  lineHeight: "1.6",
+                                }}
+                              >
+                                {app}
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+
+                      {item.description?.specifications?.technical?.length !=
+                        0 && (
+                        <div className="mb-4">
+                          <h4
+                            className="mb-3"
+                            style={{ fontSize: "18px", fontWeight: "bold" }}
+                          >
+                            Technical Specifications
+                          </h4>
+                          <div style={{ display: "grid", gap: "10px" }}>
+                            {item.description?.specifications?.technical?.map(
+                              (spec, index) => (
+                                <div
+                                  key={index}
+                                  style={{ display: "flex", gap: "10px" }}
+                                >
+                                  <span
+                                    style={{
+                                      fontWeight: "bold",
+                                      minWidth: "120px",
+                                    }}
+                                  >
+                                    {spec.label}:
+                                  </span>
+                                  <span>{spec.value}</span>
+                                </div>
+                              )
+                            )}
+                          </div>
+                        </div>
+                      )}
+
+                      <div className="mb-4">
+                        <h4
+                          className="mb-3"
+                          style={{ fontSize: "18px", fontWeight: "bold" }}
+                        >
+                          Coverage
+                        </h4>
+                        <div style={{ marginBottom: "15px" }}>
+                          <span style={{ fontWeight: "bold" }}>
+                            Standard Coverage:{" "}
+                          </span>
+                          <span>
+                            {
+                              item.description?.specifications?.coverage
+                                ?.standard
+                            }
+                          </span>
+                        </div>
+                        <div>
+                          <span style={{ fontWeight: "bold" }}>
+                            Variables affecting coverage:
+                          </span>
+                          <ul
+                            style={{
+                              listStyle: "disc",
+                              paddingLeft: "20px",
+                              marginTop: "10px",
+                            }}
+                          >
+                            {item.description?.specifications?.coverage?.variables?.map(
+                              (variable, index) => (
+                                <li key={index} style={{ marginBottom: "5px" }}>
+                                  {variable}
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="mb-4">
+                        <h4
+                          className="mb-3"
+                          style={{ fontSize: "18px", fontWeight: "bold" }}
+                        >
+                          Shelf Life
+                        </h4>
+                        <p>{item.description?.specifications?.shelfLife}</p>
+                      </div>
                     </div>
                   )}
                   {activeTab === "reviews" && (
@@ -826,6 +952,7 @@ const ProductDetailsClient = ({ item }) => {
               </div>
             </div>
           </div>
+
           <div className="releted-product-area">
             <h3
               className="releted-title"
@@ -855,10 +982,18 @@ const ProductDetailsClient = ({ item }) => {
                       height: "400px",
                     }}
                   >
-                    <Link href={`/product-details/${item.slug}`}>
+                    <Link
+                      href={`/product-details/${item.slug}`}
+                      style={{
+                        alignItems: "center",
+                        justifyContent: "center",
+                        display: "flex",
+                      }}
+                    >
                       <img
                         src={item.image} // <-- Update TV image here
                         alt="TV Product Image"
+                        style={{ width: "60%", height: "60%" }}
                       />
                     </Link>
                     <span
@@ -882,7 +1017,7 @@ const ProductDetailsClient = ({ item }) => {
                       style={{
                         display: "-webkit-box",
                         WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 5,
+                        WebkitLineClamp: 4,
                         overflow: "hidden",
                         textOverflow: "ellipsis",
                         maxWidth: "300px",

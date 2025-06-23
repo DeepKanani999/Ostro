@@ -156,7 +156,7 @@ export const reletedListingSlider2 = {
   arrows: false,
   infinite: true,
   autoplaySpeed: 1500,
-  autoplay: false,
+  autoplay: true,
   slidesToShow: 2,
   slidesToScroll: 1,
 
@@ -171,7 +171,7 @@ export const reletedListingSlider2 = {
   ],
 };
 export const reletedProductSlider = {
-  dots: false,
+  dots: true,
   arrows: false,
   infinite: false,
   autoplaySpeed: 1500,

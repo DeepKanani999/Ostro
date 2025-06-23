@@ -109,7 +109,6 @@ const Products = () => {
   }, []);
 
   useEffect(() => {
-
     let lastScrollTop = 0;
     const handleScroll = () => {
       const st = window.scrollY || document.documentElement.scrollTop;
@@ -335,43 +334,35 @@ const Products = () => {
               </div>
 
               {/* Right Section: Rounded Social Buttons */}
-              <div
-                  style={{ display: "flex", gap: "10px", marginLeft: "20px" }}
+              <div style={{ display: "flex", gap: "10px", marginLeft: "20px" }}>
+                <button className="social-rounded-btn" onClick={handleFacebook}>
+                  <img
+                    src="/assets/images/social-media-icons/Facebook.svg"
+                    alt="Facebook"
+                  />
+                </button>
+                <button
+                  className="social-rounded-btn"
+                  onClick={handleInstagram}
                 >
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleFacebook}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Facebook.svg"
-                      alt="Facebook"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleInstagram}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Instagram.svg"
-                      alt="Instagram"
-                    />
-                  </button>
-                  <button
-                    className="social-rounded-btn"
-                    onClick={handleLinkedIn}
-                  >
-                    <img
-                      src="/assets/images/social-media-icons/Linkedin.svg"
-                      alt="LinkedIn"
-                    />
-                  </button>
-                  <button className="social-rounded-btn" onClick={handleShare}>
-                    <img
-                      src="/assets/images/social-media-icons/Share.svg"
-                      alt="Share"
-                    />
-                  </button>
-                </div>
+                  <img
+                    src="/assets/images/social-media-icons/Instagram.svg"
+                    alt="Instagram"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleLinkedIn}>
+                  <img
+                    src="/assets/images/social-media-icons/Linkedin.svg"
+                    alt="LinkedIn"
+                  />
+                </button>
+                <button className="social-rounded-btn" onClick={handleShare}>
+                  <img
+                    src="/assets/images/social-media-icons/Share.svg"
+                    alt="Share"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -642,7 +633,7 @@ const Products = () => {
             >
               {products.map((val) => {
                 return (
-                  <div className="col-lg-4 col-md-6 col-sm-12" key={val.slug}>
+                  <div className="col-lg-4 col-md-6 col-sm-12 mt-4" key={val.slug}>
                     <div className="listing-item listing-grid-item-two">
                       <div
                         className="listing-thumbnail"
@@ -656,15 +647,27 @@ const Products = () => {
                           height: "400px",
                         }}
                       >
-                        <Link href={`/product-details/${val.slug}`}>
+                        <Link
+                          href={`/product-details/${val.slug}`}
+                          style={{
+                            alignItems: "center",
+                            justifyContent: "center",
+                            display: "flex",
+                          }}
+                        >
                           <img
                             src={val.image} // <-- Update TV image here
                             alt="TV Product Image"
+                            style={{ height: "60%", width: "60%" }}
                           />
                         </Link>
                         <span
                           className="featured-btn"
-                          style={{ borderRadius: "5px", fontSize:"10px", padding:"3px 10px" }}
+                          style={{
+                            borderRadius: "5px",
+                            fontSize: "10px",
+                            padding: "3px 10px",
+                          }}
                         >
                           Featured
                         </span>
@@ -679,7 +682,7 @@ const Products = () => {
                           style={{
                             display: "-webkit-box",
                             WebkitBoxOrient: "vertical",
-                            WebkitLineClamp: 5,
+                            WebkitLineClamp: 4,
                             overflow: "hidden",
                             textOverflow: "ellipsis",
                             maxWidth: "300px",
@@ -737,7 +740,10 @@ const Products = () => {
                                 >
                                   <span
                                     className="underline"
-                                    style={{ fontSize: "18px", color:"#B62025" }}
+                                    style={{
+                                      fontSize: "18px",
+                                      color: "#B62025",
+                                    }}
                                   >
                                     View Details
                                   </span>
