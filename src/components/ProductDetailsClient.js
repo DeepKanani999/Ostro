@@ -445,18 +445,24 @@ const ProductDetailsClient = ({ item }) => {
         <div className="container">
           <div
             className="product-details-wrapper mb-30 w-full"
-            style={{ width: "100%" }}
+            style={{ 
+              width: "100%", 
+              display: "flex",
+              flexDirection: isMobile ? "column" : "row",
+              gap: "20px",
+              alignItems: "flex-start"
+            }}
           >
+            {/* Image Section */}
             <div
               style={{
-                width: isMobile ? "100%" : "40%",
+                width: isMobile ? "100%" : "50%",
                 height: isMobile ? "400px" : "600px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 backgroundColor: item?.backgroundColor || "#fff",
                 borderRadius: "10px",
-                // padding: "20px",
               }}
             >
               <img
@@ -470,142 +476,87 @@ const ProductDetailsClient = ({ item }) => {
                 }}
               />
             </div>
+
+            {/* Content Section */}
             <div
-              className={`flex ${
-                isMobile ? "flex-col" : "flex-row"
-              } w-full gap-5`}
               style={{
-                display: "flex",
-                flexDirection: isMobile ? "column" : "row",
-                width: "100%",
-                gap: "20px",
+                width: isMobile ? "100%" : "50%",
+                padding: isMobile ? "20px 0" : "20px",
               }}
             >
-              <div
-                style={{
-                  width: isMobile ? "100%" : "50%",
-                  padding: isMobile ? "0px" : "0 20px",
-                }}
-              >
-                <div className="product-info mt-30">
-                  <h3
-                    className="title"
+              <div className="product-info">
+                <h3
+                  className="title"
+                  style={{
+                    fontSize: isMobile ? "20px" : "24px",
+                    marginBottom: "15px",
+                  }}
+                >
+                  {item?.name}
+                </h3>
+                <span
+                  style={{
+                    fontSize: isMobile ? "14px" : "16px",
+                    color: "#666",
+                    marginBottom: "20px",
+                    display: "block",
+                  }}
+                >
+                  {item?.detail}
+                </span>
+                <button
+                  onClick={() => {
+                    getPriceButton(item);
+                  }}
+                  className="flex items-center justify-center gap-2 px-4 py-1 mt-3 mb-3 border border-gray-300 rounded-lg transition"
+                  style={{
+                    backgroundColor: "#24D07A",
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: isMobile ? "100%" : "fit-content",
+                  }}
+                >
+                  <img
+                    src="/assets/images/WhatsApp_Image.png"
+                    alt="WhatsApp Icon"
                     style={{
-                      fontSize: isMobile ? "20px" : "24px",
-                      marginBottom: "15px",
+                      height: "17px",
+                      width: "17px",
+                      marginRight: "8px",
                     }}
-                  >
-                    {item?.name}
-                  </h3>
+                  />
                   <span
+                    className="underline text-white"
                     style={{
-                      fontSize: isMobile ? "14px" : "16px",
-                      color: "#666",
-                      marginBottom: "20px",
-                      display: "block",
+                      fontSize: isMobile ? "16px" : "18px",
                     }}
                   >
-                    {item?.detail}
+                    Get Price
                   </span>
-                  <button
-                    onClick={() => {
-                      getPriceButton(item);
-                    }}
-                    className="flex items-center justify-center gap-2 px-4 py-1 mt-3 mb-3 border border-gray-300 rounded-lg transition"
-                    style={{
-                      backgroundColor: "#24D07A",
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      width: isMobile ? "100%" : "fit-content",
-                    }}
-                  >
-                    <img
-                      src="/assets/images/WhatsApp_Image.png"
-                      alt="WhatsApp Icon"
-                      style={{
-                        height: "17px",
-                        width: "17px",
-                        marginRight: "8px",
-                      }}
-                    />
-                    <span
-                      className="underline text-white"
-                      style={{
-                        fontSize: isMobile ? "16px" : "18px",
-                      }}
+                </button>
+                <div className="product-meta mt-4">
+                  <div className="mb-4">
+                    <h4
+                      className="mb-3"
+                      style={{ fontSize: "18px", fontWeight: "bold" }}
                     >
-                      Get Price
-                    </span>
-                  </button>
-                  <div className="product-meta mt-4">
-                    <div className="category" style={{ marginBottom: "20px" }}>
-                      <span
-                        className="title text-sm"
-                        style={{
-                          display: "block",
-                          marginBottom: "10px",
-                          fontWeight: "bold",
-                          fontSize: isMobile ? "14px" : "16px",
-                        }}
-                      >
-                        Usability:
-                      </span>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexWrap: "wrap",
-                          gap: "8px",
-                        }}
-                      >
-                        {item?.usability?.map((val) => (
-                          <span
-                            key={val}
-                            style={{
-                              borderRadius: "20px",
-                              fontSize: isMobile ? "12px" : "14px",
-                            }}
-                            className="px-3 py-2 rounded-full border border-gray-300 bg-white"
-                          >
-                            {val}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="category">
-                      <span
-                        className="title text-sm"
-                        style={{
-                          display: "block",
-                          marginBottom: "10px",
-                          fontWeight: "bold",
-                          fontSize: isMobile ? "14px" : "16px",
-                        }}
-                      >
-                        Benefits:
-                      </span>
-                      <div
-                        style={{
-                          display: "flex",
-                          flexWrap: "wrap",
-                          gap: "8px",
-                        }}
-                      >
-                        {item?.benefits?.map((val) => (
-                          <span
-                            key={val}
-                            style={{
-                              borderRadius: "20px",
-                              fontSize: isMobile ? "12px" : "14px",
-                            }}
-                            className="px-3 py-2 rounded-full border border-gray-300 bg-white"
-                          >
-                            {val}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                      Features
+                    </h4>
+                    <ul style={{ listStyle: "disc", paddingLeft: "20px" }}>
+                      {item?.features?.map((val, index) => (
+                        <li
+                          key={index}
+                          style={{
+                            marginBottom: "10px",
+                            lineHeight: "1.6",
+                          }}
+                        >
+                          {val}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -666,29 +617,63 @@ const ProductDetailsClient = ({ item }) => {
                         )}
                       </div>
 
-                      <div className="mb-4">
-                        <h4
-                          className="mb-3"
-                          style={{ fontSize: "18px", fontWeight: "bold" }}
-                        >
-                          Applications
-                        </h4>
-                        <ul style={{ listStyle: "disc", paddingLeft: "20px" }}>
-                          {item.description?.specifications?.applications?.map(
-                            (app, index) => (
-                              <li
-                                key={index}
-                                style={{
-                                  marginBottom: "10px",
-                                  lineHeight: "1.6",
-                                }}
-                              >
-                                {app}
-                              </li>
-                            )
-                          )}
-                        </ul>
-                      </div>
+                      {item.description?.specifications?.applications?.length >
+                        0 && (
+                        <div className="mb-4">
+                          <h4
+                            className="mb-3"
+                            style={{ fontSize: "18px", fontWeight: "bold" }}
+                          >
+                            Applications
+                          </h4>
+                          <ul
+                            style={{ listStyle: "disc", paddingLeft: "20px" }}
+                          >
+                            {item.description?.specifications?.applications?.map(
+                              (app, index) => (
+                                <li
+                                  key={index}
+                                  style={{
+                                    marginBottom: "10px",
+                                    lineHeight: "1.6",
+                                  }}
+                                >
+                                  {app}
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      )}
+
+                      {item.description?.specifications?.area_of_applications
+                        ?.length > 0 && (
+                        <div className="mb-4">
+                          <h4
+                            className="mb-3"
+                            style={{ fontSize: "18px", fontWeight: "bold" }}
+                          >
+                            Area Of Applications
+                          </h4>
+                          <ul
+                            style={{ listStyle: "disc", paddingLeft: "20px" }}
+                          >
+                            {item.description?.specifications?.area_of_applications?.map(
+                              (app, index) => (
+                                <li
+                                  key={index}
+                                  style={{
+                                    marginBottom: "10px",
+                                    lineHeight: "1.6",
+                                  }}
+                                >
+                                  {app}
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      )}
 
                       {item.description?.specifications?.technical?.length !=
                         0 && (
@@ -722,14 +707,18 @@ const ProductDetailsClient = ({ item }) => {
                         </div>
                       )}
 
-                      <div className="mb-4">
-                        <h4
-                          className="mb-3"
-                          style={{ fontSize: "18px", fontWeight: "bold" }}
-                        >
-                          Coverage
-                        </h4>
-                        <div style={{ marginBottom: "15px" }}>
+                      {item.description?.specifications?.coverage && (
+                        <div className="mb-4">
+                          <h4
+                            className="mb-3"
+                            style={{ fontSize: "18px", fontWeight: "bold" }}
+                          >
+                            Coverage
+                          </h4>
+                          <span>
+                            {item.description?.specifications?.coverage}
+                          </span>
+                          {/* <div style={{ marginBottom: "15px" }}>
                           <span style={{ fontWeight: "bold" }}>
                             Standard Coverage:{" "}
                           </span>
@@ -759,8 +748,9 @@ const ProductDetailsClient = ({ item }) => {
                               )
                             )}
                           </ul>
+                        </div> */}
                         </div>
-                      </div>
+                      )}
 
                       <div className="mb-4">
                         <h4
@@ -770,6 +760,21 @@ const ProductDetailsClient = ({ item }) => {
                           Shelf Life
                         </h4>
                         <p>{item.description?.specifications?.shelfLife}</p>
+                      </div>
+                      <div className="mb-4">
+                        <h4
+                          className="mb-3"
+                          style={{
+                            fontSize: "18px",
+                            fontWeight: "bold",
+                            color: "#dc3545",
+                          }}
+                        >
+                          Note
+                        </h4>
+                        <p style={{ color: "#dc3545" }}>
+                          {item.description?.specifications?.note}
+                        </p>
                       </div>
                     </div>
                   )}
